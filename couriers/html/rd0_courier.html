@@ -1,0 +1,2634 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Capstone® Courier | Capsim Portal</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+
+ 	<link rel="shortcut icon" href="https://ww3.capsim.com/assets/Images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://ww3.capsim.com/assets/Images/favicon.ico" type="image/x-icon">
+
+	<link rel="STYLESHEET" type="text/css" href="rd0_courier_files/bootstrap.css">
+	<link rel="STYLESHEET" type="text/css" href="rd0_courier_files/bootstrap-responsive.css">
+
+
+	
+		<link rel="STYLESHEET" type="text/css" href="rd0_courier_files/capstone_002.css">
+	
+	<link rel="STYLESHEET" type="text/css" href="rd0_courier_files/validationEngine.jquery.css">
+	<link type="text/css" href="rd0_courier_files/jquery-ui-1.8.16.custom.css" rel="stylesheet">
+ 	<link rel="STYLESHEET" type="text/css" href="rd0_courier_files/capstone.css">
+	<link rel="STYLESHEET" type="text/css" href="rd0_courier_files/ADA.css">
+
+
+
+	<script type="text/javascript" async="" src="rd0_courier_files/js"></script><script type="text/javascript" src="rd0_courier_files/54032x_xchat.js"></script><script async="" src="rd0_courier_files/analytics.js"></script><script src="rd0_courier_files/jquery-1.8.2.min.js"></script>
+	<script src="rd0_courier_files/jquery-ui.js"></script>
+	<script type="text/javascript" src="rd0_courier_files/ckeditor.js"></script><style>.cke{visibility:hidden;}</style>
+	<script type="text/javascript" src="rd0_courier_files/bootstrap_new.js"></script>
+
+	<script type="text/javascript" src="rd0_courier_files/jquery.validationEngine.js"></script>
+
+	<script type="text/javascript" src="rd0_courier_files/jquery.validationEngine-EN.js"></script>
+
+	<script type="text/javascript" charset="utf-8" language="javascript" src="rd0_courier_files/highcharts.js"></script>
+	<script type="text/javascript" charset="utf-8" language="javascript" src="rd0_courier_files/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" charset="utf-8" language="javascript" src="rd0_courier_files/datatable-bootstrap-pagination.js"></script>
+	<script type="text/javascript" charset="utf-8" language="javascript" src="rd0_courier_files/bootstrap-inputmask.min.js"></script>
+	<script type="text/javascript" charset="utf-8" language="javascript" src="rd0_courier_files/bootstrap-affix.min.js"></script>
+	<script type="text/javascript" charset="utf-8" language="javascript" src="rd0_courier_files/jquery.numberformat.js"></script>
+	<script type="text/javascript" charset="utf-8" language="javascript" src="rd0_courier_files/jqueryFormToJson.js"></script>
+
+
+
+
+	<style>
+	 html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+	 #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -145px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 145px;
+      }
+	  </style>
+
+
+
+	<script type="text/javascript" language="javascript">
+		$(function () {
+
+			var $popover = $(".ToolTipClass").popover({
+				html : true,
+				template: '<div class="popover InfoPopover" style="background:white;text-align:left;"><div class="arrow"></div><div class="popover-inner" ><div class="popover-content"><p></p></div></div></div>',
+				placement: function(tip, element){
+
+					var offset = $(element).offset();
+					height = $(document).outerHeight();
+					width = $(document).outerWidth();
+
+					vert = 0.5 * height - offset.top;
+					//vertPlacement = vert > 0 ? 'bottom' : 'top';
+					vertPlacement = 'bottom';
+
+					horiz = 0.5 * width - offset.left;
+					horizPlacement = horiz > 0 ? 'right' : 'left';
+					placement = Math.abs(horiz) > Math.abs(vert) ? horizPlacement : vertPlacement;
+
+					if ($(element).attr('data-content').length > 500){
+						placement = vertPlacement;
+					};
+
+
+					$('.InfoPopover').remove();
+					return placement;
+				}
+			});
+
+
+			$(document).on("click", function (e) {
+    			var $target = $(e.target),
+        			isPopover = $(e.target).is('.ToolTipClass img'),
+        			inPopover = $(e.target).closest('.popover').length > 0
+
+		  		if (!isPopover && !inPopover) $popover.popover('hide');
+			});
+
+			$(document).on("keypress", function (e) {
+				if( (e.which == 13 || e.which == 32) && $(e.target).is('.ToolTipClass')) {
+					  $(e.target).find("img").click();
+				}
+			});
+		});
+	</script>
+
+
+
+
+
+<link href="rd0_courier_files/admin.css" rel="stylesheet" type="text/css">
+
+
+		 
+		<script type="text/javascript" charset="utf-8" language="javascript" src="rd0_courier_files/jwplayer.js"></script>
+		<script type="text/javascript">jwplayer.key="m7qGgYuq5TPknldyFBRDoEhwOoWi/XwDVN78sW21bx8=";</script>
+		<link rel="stylesheet" type="text/css" href="rd0_courier_files/situationAnalysis.css">
+	<link rel="stylesheet" type="text/css" href="rd0_courier_files/54032x_xchat.css"></head>
+	<body id="BodyID" onpageshow='event.persisted&amp;&amp;(function(){var x=CKEDITOR.instances,d,i;for(i in x){d=x[i].document;if(d){d.$.designMode="off";d.$.designMode="on";}}})();'>
+		 
+
+		 <div id="wrap">
+
+		<div class="row">
+		<div class="capstoneContent" style="margin-bottom:10px" role="banner">
+
+		<div class="container">
+
+		<div class="row">
+			<a class="skip-to" href="#bypass-side-navigation">Skip top navigation</a>
+				<div class="span3 ">
+					<a href="https://ww3.capsim.com/student/portal/index.cfm?template=dashboard">
+						
+							<img src="rd0_courier_files/capstone_logo.webp" border="0" style="max-height:35px;" alt="capstone logo">
+						
+					</a>
+				</div>
+
+				<div class="span9">
+
+				 	Welcome back 
+						<strong>Brandon Hulse</strong>.
+						|
+						Industry ID  :
+						<strong>
+							C154450
+						</strong>
+						|
+						Title: <strong>Advanced Engineering and Business Practices</strong>
+						<br>
+					
+
+
+					<div class="btn-group" role="navigation" aria-label="utility menu">
+						
+							<a style="padding-right:5px; padding-top:4px; " class="btn btn-small" href="https://ww3.capsim.com/student/portal/index.cfm?template=Messages">
+								<i class="icon-envelope"></i>
+								Messages 
+							</a>
+
+							<a class="btn btn-small" href="https://ww3.capsim.com/student/portal/index.cfm?template=myAccount">
+								<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_account.webp" aria-hidden="true" alt="">
+								My Account 
+							</a>
+							<a class="btn btn-small" href="https://ww3.capsim.com/student/portal/index.cfm?template=support">
+								<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_guide.webp" aria-hidden="true" alt="">
+								Help &amp; Support 
+							</a>
+						
+						<a class="btn btn-small" href="https://ww3.capsim.com/login/?logout=1">
+							<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_logout.webp" aria-hidden="true" alt="">
+							Logout 
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		</div>
+		
+	</div>
+
+
+	<div style="clear:both"></div>
+	<div class="row" style="margin-left: 0;"> 
+	<div class="container">
+	<div class="row">
+
+
+	
+	<div class="span2 visible-desktop">
+
+	<div class="UIbox" style="min-width:140px">
+	<h2 class="boxHeader"> Menu </h2>
+	<div class="sidebar-nav" role="navigation" aria-label="main menu">
+	<a class="skip-to" href="#main" id="bypass-side-navigation">Skip side navigation</a>
+	<ul class="nav nav-list">
+
+		
+
+		
+	
+		<li class="dropdown-submenu" role="menu">
+			
+				<a class="MenuLink" href="#" id="tut_gettingStarted">
+					<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_gettingStarted.webp" aria-hidden="true" alt="">
+					Getting Started 
+				</a>
+				
+<ul class="dropdown-menu">
+    <li role="menuitem">
+        <a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted">
+            Getting Started 
+        </a>
+    </li>
+    
+        <li role="menuitem">
+            <a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.IntroductoryLesson">
+                Introductory<br>Lesson 
+            </a>
+        </li>
+    
+        <li class="dropdown-submenu" role="menu">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="##">
+                The Guide 
+            </a>
+            <ul class="dropdown-menu">
+                
+                    <li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.TeamMemberGuide"> Overview </a></li>
+                
+                    <li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.TeamMemberGuide.OnlineGuide"> Online Guide </a></li>
+                
+                    <li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.TeamMemberGuide.PDFGuide"> PDF Guide </a></li>
+                
+            </ul>
+        </li>
+    
+        <li role="menuitem">
+            <a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.IndustryConditionsReport">
+                Industry Conditions<br>Report 
+            </a>
+        </li>
+    
+        <li role="menuitem">
+            <a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.RehearsalTutorial">
+                Rehearsal<br> Tutorial 
+            </a>
+        </li>
+    
+        <li role="menuitem">
+            
+                <a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.CapstoneCourier">
+                    Capstone<br>Courier 
+                </a>
+            
+        </li>
+    
+        <li role="menuitem">
+            <a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.JoinACompany">
+                Join a<br>Company 
+            </a>
+        </li>
+    
+        <li role="menu" class="dropdown-submenu">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="##">
+                Situation Analysis 
+            </a>
+            <ul class="dropdown-menu">
+                
+                    <li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.SituationAnalysis"> Intro </a></li>
+                
+                    <li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.SituationAnalysis.PerceptualMap1"> Perceptual Map </a></li>
+                
+                    <li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.SituationAnalysis.PerceptualMap2"> Ideal Spots </a></li>
+                
+                    <li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.SituationAnalysis.DemandAnalysis"> Demand Analysis </a></li>
+                
+                    <li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.SituationAnalysis.CapacityAnalysis"> Capacity Analysis </a></li>
+                
+                    <li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.SituationAnalysis.MarginAnalysis"> Margin Analysis </a></li>
+                
+                    <li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.SituationAnalysis.ConsumerReport"> Consumer Report </a></li>
+                
+            </ul>
+        </li>
+    
+        <li role="menuitem">
+            <a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.PickAStrategy">
+                Pick a<br>Strategy 
+            </a>
+        </li>						
+    
+        <li role="menuitem">
+            <a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted.ModulesPlugins">
+                Modules &amp;<br>Plug-Ins</a> 
+            
+        </li>
+    
+</ul> 
+		</li>
+	
+		<li>
+ 			<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=dashboard" id="tut_dashboard">
+ 			<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_dashboard.webp" aria-hidden="true" alt="">
+			Dashboard 
+				</a>
+		</li>
+	
+			<li>
+				<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=decisions" id="tut_decisions">
+					<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_decisions.webp" aria-hidden="true" alt="">
+					Decisions 
+				</a>
+			</li>
+		
+		<li>
+			
+				<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=displaydecisionfileaudittrail_2004" id="tut_deciosionAudit">
+			
+				<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_decisionAudit.webp" aria-hidden="true" alt="">
+				Decision Audit 
+			</a>
+		</li>
+	
+
+		<li class="dropdown-submenu" role="menu">
+			<a class="MenuLink" href="#" id="tut_homework">
+				<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_homework.webp" aria-hidden="true" alt="">
+				Homework 
+			</a>
+					<ul class="dropdown-menu">
+								<li role="menuitem">
+									<a href="https://ww3.capsim.com/student/portal/index.cfm?template=homework"> Homework </a>
+								</li>
+								
+									<li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=index&amp;d=modules/homeworkAssignments/STUDENT&amp;sectionKey=127033"> Assignments </a></li>
+								
+								<li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=index&amp;d=modules/peerevalslegacy/student"> Legacy Peer Evals </a></li>
+								
+
+									<li class="dropdown-submenu" role="menu"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Peer Evals </a>
+											<ul class="dropdown-menu">
+												
+												<li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=student.reports&amp;evaltype=peer&amp;d=modules/peerevals/includes"> Review  </a></li>
+												<li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=student.schedule&amp;evaltype=peer&amp;d=modules/peerevals/includes"> Schedule </a></li>
+
+										</ul>
+									 </li>
+									
+								
+									<li class="dropdown-submenu" role="menu"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Success Measures  </a>
+										<ul class="dropdown-menu">
+												<li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=homework.successMeasures.Overview&amp;sectionKey=127033"> Overview  </a></li>
+												<li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=homework.successMeasures.Input&amp;sectionKey=127033"> Input  </a></li>
+												<li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=homework.successMeasures.criteriaDefinition&amp;d=modules/homeworkAssignments"> Criteria Definition  </a></li>
+										</ul>
+									</li>
+									
+								
+				</ul>
+		</li>
+	
+	<li>
+			<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=homepage&amp;d=modules/ezforums/program" id="tut_conferences">
+				<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_conference.webp" aria-hidden="true" alt="">
+				Conference 
+			</a>
+		</li>
+
+	
+
+
+			<li>
+				<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=teammate.resources.welcome&amp;d=modules/peerevals/includes" id="tut_teammate">
+				 	<img src="rd0_courier_files/icon_teammate.webp" style="padding-right:5px; padding-top:3px;" aria-hidden="true" alt="">
+					 TeamMATE 
+				</a>
+			</li>
+
+	
+			<li>
+				<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=plugins.ethics" id="tut_ethics">
+					<img src="rd0_courier_files/icon_plugins.webp" style="padding-right:5px; padding-top:3px;" aria-hidden="true" alt="">
+					Ethics Plug-In 
+				</a>
+			</li>
+		
+		<li id="ReportsShow" class="dropdown-submenu" role="menu">
+
+			<a class="MenuLink" href="#" id="tut_reports">
+				<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_report.webp" aria-hidden="true" alt="">
+				Reports 
+			</a>
+			<ul class="dropdown-menu">
+				<li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=reports"> Reports  </a></li>
+				
+					<li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=reports.reports"> Industry Reports  </a></li>
+				
+					<li role="menuitem"><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=reports.debrief"> Debrief Reports  </a></li>
+				
+			</ul>
+		</li>
+	
+	<li>
+
+		<a class="MenuLink" href="https://ww5.capsim.com/studentapp/auth/login?studentKey=2847374&amp;token=8679051877E9E6183B7D789E5D2D8036"><img src="rd0_courier_files/icon_progress.webp" style="padding-right:5px" id="tut_logout" aria-hidden="true" alt=""> Course Page  </a>
+	
+								</li>
+
+
+</ul>
+</div>
+
+
+
+<br>
+
+</div>
+
+
+
+
+
+
+			
+	</div>
+ 	
+
+ <div class="navbar span10 hidden-desktop">
+    <div class="navbar-inner">
+    <div class="container">
+
+    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+  <style>
+		.mobile-nav{
+			color:#000000 !important;
+			float:none !important;
+		}
+	 </style>
+	<div class="row-fluid">
+		<div class="span12">
+			<a class="btn btn-navbar mobile-nav" data-toggle="collapse" data-target="#navigation">
+			Menu
+			<center>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</center>
+			</a>
+		</div>
+	</div>
+
+    <!-- Be sure to leave the brand out there if you want it shown -->
+
+    <!-- Everything you want hidden at 940px or less, place within here -->
+    <div class="nav-collapse collapse" id="navigation">
+    <!-- .nav, .navbar-search, .navbar-form, etc -->
+	<ul class="nav">
+		
+	
+		<li>
+		<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=gettingStarted">
+			<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_gettingStarted.webp" aria-hidden="true" alt="">
+			Getting Started 
+		</a>
+	
+		</li>
+
+	
+		<li>
+ 			<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=dashboard">
+ 			<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_dashboard.webp" aria-hidden="true" alt="">
+			Dashboard 
+				</a>
+		</li>
+	
+			<li>
+				<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=decisions" id="tut_decisions2">
+					<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_decisions.webp" aria-hidden="true" alt="">
+					Decisions 
+				</a>
+			</li>
+		
+		<li>
+			
+				<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=displaydecisionfileaudittrail_2004" id="tut_deciosionAudit2">
+			
+
+				<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_decisionAudit.webp" aria-hidden="true" alt="">
+				Decision Audit 
+			</a>
+		</li>
+	
+
+		<li class="dropdown-submenu">
+			<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=homework">
+				<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_homework.webp" aria-hidden="true" alt="">
+				Homework 
+			</a>
+				<ul class="dropdown-menu">
+					<li><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=index&amp;d=modules/homeworkAssignments/STUDENT&amp;sectionKey=127033"> Assignments </a></li>
+
+					
+						<li class="dropdown-submenu"> Peer Evals 
+								<ul class="dropdown-menu">
+									
+									<li><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=student.reports&amp;evaltype=peer&amp;d=modules/peerevals/includes"> Review </a></li>
+									<li><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=student.schedule&amp;evaltype=peer&amp;d=modules/peerevals/includes"> Schedule </a></li>
+
+							</ul>
+						 </li>
+						
+					
+						<li class="dropdown-submenu"> <a> Success Measures  </a>
+							<ul class="dropdown-menu">
+									<li><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=homework.successMeasures.Overview&amp;sectionKey=127033"> Overview  </a></li>
+									<li><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=homework.successMeasures.Input&amp;sectionKey=127033"> Input  </a></li>
+									<li><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=homework.successMeasures.criteriaDefinition&amp;d=modules/homeworkAssignments"> Criteria Definition  </a></li>
+							</ul>
+						</li>
+						
+					
+				</ul>
+		</li>
+	
+	<li>
+			<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=homepage&amp;d=modules/ezforums/program">
+				<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_conference.webp" aria-hidden="true" alt="">
+				Conference 
+			</a>
+		</li>
+	
+
+
+			<li>
+				<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=teammate.resources.welcome&amp;d=modules/peerevals/includes">
+					<img src="rd0_courier_files/icon_teammate.webp" style="padding-right:5px; padding-top:3px;" aria-hidden="true" alt="">
+					 TeamMATE 
+				</a>
+			</li>
+
+	
+			<li>
+				<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=plugins.ethics">
+					<img src="rd0_courier_files/icon_plugins.webp" style="padding-right:5px; padding-top:3px;" aria-hidden="true" alt="">
+					Ethics Plug-In 
+				</a>
+			</li>
+		
+		<li id="ReportsShow2" class="dropdown-submenu">
+
+			<a class="MenuLink" href="https://ww3.capsim.com/student/portal/index.cfm?template=reports">
+				
+				<img style="padding-right:5px; padding-top:3px;" src="rd0_courier_files/icon_report.webp" aria-hidden="true" alt="">
+				Reports 
+			</a>
+			<ul class="dropdown-menu">
+			
+				<li><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=reports.reports"> Industry Reports  </a></li>
+			
+				<li><a class="Submenu" href="https://ww3.capsim.com/student/portal/index.cfm?template=reports.debrief"> Debrief Reports  </a></li>
+			
+			</ul>
+		</li>
+	
+	<li>
+
+		<a class="MenuLink" href="https://ww5.capsim.com/studentapp/auth/login?studentKey=2847374&amp;token=8679051877E9E6183B7D789E5D2D8036"><img src="rd0_courier_files/icon_progress.webp" style="padding-right:5px" aria-hidden="true" alt=""> Course Page  </a>
+	</li>
+
+ 	</ul>
+
+			    </div>
+    </div>
+    </div>
+    </div>
+
+	
+
+
+<div class="span10" id="main" role="main">
+	
+
+
+
+
+
+<div class="row">
+	<div class="span10 h7">	
+		<h1 id="page-title"> Capstone<sup>®</sup> Courier  </h1>
+	</div>
+</div>	
+
+
+
+	<div id="breadcrumb">
+		<ul class="crumbs">
+			<li class="first">
+				
+				<a style="z-index:9;" href="https://ww3.capsim.com/student/portal/index.cfm?template=reports"><span></span> Industry Results  </a>
+			</li>
+			<li>
+				<a style="z-index:8;" href="https://ww3.capsim.com/student/portal/index.cfm?template=reports.reports"> Reports  </a>
+			</li>		
+			<li>
+				<a style="z-index:7;" href="https://ww3.capsim.com/student/portal/index.cfm?template=reports.reports.annualNewspaper_2004"> Capstone<sup>®</sup> Courier  </a>
+			</li>
+			</ul>
+	</div>
+	
+	<div style="clear:both"></div>
+	<div class="twelvecol">
+		<div class="UIbox" style="margin-bottom:20px">
+		<span class="boxHeader"> Capstone<sup>®</sup> Courier  </span>
+			
+			
+			
+  
+	<iframe width="100%" height="800" frameborder="0" src="rd0_courier_files/ShowCourier.html" noresize="" scrolling="yes" marginheight="0" title="Capsim Foundation Fast Track"></iframe>
+
+
+
+</div>
+</div>
+ </div>
+</div>
+	</div>
+
+
+	    <div id="push"></div>
+    </div>
+
+
+
+
+</div>
+
+<style type="text/css">
+  #footer a{color: #fff;}
+  .row-divider {
+    height: 1px;
+    margin: 9px 1px;
+    overflow: hidden;
+    background-color: #e5e5e5;
+    border-bottom: 1px solid #ffffff;
+  }
+</style>
+
+
+
+
+<div id="footer" style="color:white; background-color: #0574AF; color: #fff; " role="contentinfo">
+	<div class="container">
+    <div class="row-fluid">
+      
+			<div class="span3" style="margin-top:15px;">
+				<img width="238" height="49" src="rd0_courier_files/CAP_Logo_White.webp" alt="Capsim logo">
+      </div>
+      
+			<div class="span9" style="margin-top:25px;">
+				 <strong>Phone:</strong> 877-477-8787 | <strong>Email:</strong> <a class="whitelink linkclass" href="mailto:support@capsim.com" title="Click here to send email to Capsim Management Simulations"><font class="verdana11BluB">support@capsim.com</font></a> | <strong>Address:</strong> 2012 Corporate Lane, Suite 108 Naperville, IL 60563  
+      </div>
+
+            
+    </div>
+    
+    <div class="row-fluid row-divider"></div>
+    <div class="row-fluid">
+      <div class="span12" style="margin-top:5px;">
+        <strong>Copyright</strong> © 2025 Capsim Management Simulations, Inc.®. All Rights Reserved. Capsim® and Capsim.com®.  
+      </div>
+    </div>
+	</div>
+</div>
+
+
+<script>
+
+	var extendSession = 1;
+
+</script>
+<script src="rd0_courier_files/sessionTimeout.js" type="text/javascript" charset="utf-8"></script> 
+ 
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="sessionWarning" tabindex="-1" role="dialog" aria-labelledby="sessionWarningLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">        
+        <h2 class="modal-title" id="sessionWarningLabel">Session expiration warning </h2>
+      </div>
+      <div class="modal-body">
+        Session will expire in <span id="dialogText-warning"></span> seconds! Click continue working or you will be logged out
+      </div>
+      <div class="modal-footer">      
+        <button type="button" class="btn btn-primary" id="restartSession">Continue working</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="sessionExpired" tabindex="-1" role="dialog" aria-labelledby="sessionExpiredLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">        
+        <h2 class="modal-title" id="sessionExpiredLabel">Session expired</h2>
+      </div>
+      <div class="modal-body">
+        Your session has expired!
+		<br>Click "Log in" to log in again.
+      </div>
+      <div class="modal-footer">      
+        <a href="https://ww3.capsim.com/login/?logout=1" class="btn btn-primary">Log in</a>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44552105-1', 'capsim.com');
+  ga('send', 'pageview');
+
+</script>
+
+		
+		<script>
+			var chat_appid = '54032';
+			var chat_auth = '80307087012fba67da108162a33aec3f';
+			var chat_signature = '41180935703382562aa7b2c4da102c48';
+
+			var chat_id = "2847374"; //userid
+			var chat_name = "Brandon Hulse"; //firstname lastname
+			var chat_friends = "2846783,2846924,2847035,2847221,2847374,2848284,2848445"; //list of friends userid's
+
+			(function() {
+				const chat_css = document.createElement('link'); chat_css.rel = 'stylesheet'; chat_css.type = 'text/css'; chat_css.href = 'https://fast.cometondemand.net/'+chat_appid+'x_xchat.css';
+				document.getElementsByTagName("head")[0].appendChild(chat_css);
+				const chat_js = document.createElement('script'); chat_js.type = 'text/javascript'; chat_js.src = 'https://fast.cometondemand.net/'+chat_appid+'x_xchat.js'; var chat_script = document.getElementsByTagName('script')[0]; chat_script.parentNode.insertBefore(chat_js, chat_script);
+			})();
+		</script>
+	
+
+
+<script type="text/javascript" charset="UTF-8" src="rd0_courier_files/1f65fadefafa779b3119103b6107119c.js"></script>
+
+	<script>
+		"use strict";
+		$(document).ready(function () {
+			var tabs = document.querySelectorAll('[role="tab"]');
+			var tabList = document.querySelector('[role="tablist"]'); // Add a click event handler to each tab
+
+			// Enable arrow navigation between tabs in the tab list
+			if (tabs) {
+				tabs.forEach(function (tab) {
+					tab.addEventListener("click", changeTabs);
+				});
+			}
+
+			// Move tabs
+			if (tabList) {
+				var tabFocus = 0;
+				tabList.addEventListener("keydown", function (e) {
+					// Move right
+					if (e.keyCode == 32) {
+						e.preventDefault();
+						e.target.click();
+					} else if (e.keyCode === 39 || e.keyCode === 37) {
+						// tabs[tabFocus].setAttribute("tabindex", -1);
+
+						if (e.keyCode === 39) {
+							tabFocus++; // If we're at the end, go to the start
+
+							if (tabFocus >= tabs.length) {
+								tabFocus = 0;
+							} // Move left
+						} else if (e.keyCode === 37) {
+							tabFocus--; // If we're at the start, move to the end
+
+							if (tabFocus < 0) {
+								tabFocus = tabs.length - 1;
+							}
+						}
+
+						tabs[tabFocus].setAttribute("tabindex", 0);
+						tabs[tabFocus].focus();
+					}
+				});
+			}
+		});
+	</script>
+	
+	
+
+ 
+
+
+
+
+
+	<script>
+		"use strict";
+		var pageTitleEl = document.querySelector('[id="page-title"]');
+		document.title = pageTitleEl ? pageTitleEl.innerHTML.replace(/<\/?sup>/g, '') + " | " + document.title : document.title;
+		document.title = document.title.includes("&amp;") ? document.title.replace("&amp;", "and") : document.title;
+
+		// Enables tabbing through sidebar submenus
+		var $menuOptions = $('.sidebar-nav > .nav > li');
+
+
+		$menuOptions.on('click', function (e) {
+			$(this).find('.MenuLink').dropdown();
+			$(this).find('.dropdown-toggle').dropdown();
+
+			var that = this;
+
+			// Mitigate the need to press click twice before submenu activates
+			setTimeout(function () {
+				$(that).find('.MenuLink').click();
+			}, 0);
+		})
+
+		$(document).ready(function(){
+			$(".sidebar-nav a").keypress(function(e){
+				if (e.keyCode == 32) {$(this).click()}	
+			});
+			if($("[role='main']").length>1) $("[role='main']").first().removeAttr("role")
+			
+			$(document).on("keypress", function (e) {
+				if( (e.which == 32) && $(e.target).is('.space-click')) {
+					  $(e.target)[0].click();
+				}
+			});
+		});
+		
+
+		function changeTabs(e) {
+			var target = e.target;
+			var grandparent = target.parentNode.parentNode; // Remove all current selected tabs
+
+			grandparent.querySelectorAll('[aria-selected="true"]').forEach(function (t) {
+				return t.setAttribute("aria-selected", false);
+			}); // Set this tab as selected
+
+			target.setAttribute("aria-selected", true); // Hide all tab panels
+
+			grandparent.querySelectorAll('[role="tabpanel"]').forEach(function (p) {
+				return p.setAttribute("hidden", true);
+			}); // Show the selected panel
+
+		}		
+	</script>
+<iframe src="rd0_courier_files/cometservice.html" name="cometservice" id="cometchat_cometservice_iframe" style="display: none;"></iframe>
+    <style data-type="cookiescriptstyles">
+      #cookiescript_injected {
+    background-color: #2d2d2d;
+    z-index: 999997;
+    opacity: 1;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'Open Sans', Arial, 'Trebuchet MS', 'Segoe UI', 'Helvetica', sans-serif;
+    box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.35);
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+.cookiescript_checkbox_label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding:0 4px;
+    line-height: 1.5;
+    margin:0;
+	text-align: left;
+}
+#cookiescript_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 29px;
+    line-height: 13px;
+    cursor: pointer;
+    color: #FFFFFF;
+    height: 15px;
+    width: 15px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    letter-spacing: 0;
+    font-family: 'Trebuchet MS', 'Arial', sans-serif;
+    font-weight: 100;
+    opacity: 0.85;
+    z-index: 999999;
+}
+
+#cookiescript_buttons {
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+}
+#cookiescript_manage_wrap {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.1px;
+    font-weight: 500;
+}
+#cookiescript_manage {
+    display: inline;
+    cursor: pointer;
+    color: #FFFFFF;
+    opacity:0.85;
+}
+#cookiescript_manage #cookiescript_manageicon .cookiescript_gear {
+    fill: #FFFFFF;
+}
+#cookiescript_manage:hover #cookiescript_manageicon .cookiescript_gear {
+    fill: #6BBE6B;;
+}
+
+svg#cookiescript_manageicon {
+    width: 15px;
+    height: 15px;
+    display: inline;
+    margin: 0 5px 0 0;
+    padding: 0;
+    position: relative;
+    top: 3px;
+    vertical-align: baseline;
+}
+#cookiescript_header {
+    background-color: transparent;
+    z-index: 999998;
+    color: #FFFFFF;
+    font-size: 17px;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    opacity:1;
+}
+.cookiescript_checkbox {
+    display: flex;
+    flex-direction: row;
+}
+input.cookiescript_checkbox_input {
+}
+span.cookiescript_checkbox_text {
+    display: inline-block;
+    font-size: 11px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+#cookiescript_accept,
+#cookiescript_save {
+    border: 0;
+    transition: all 0.25s ease 0s;
+    background-color: #6BBE6B;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 11px;
+    text-align: center;
+    line-height: 3.3;
+    letter-spacing: 0.4px;
+}
+/*IE 9 fixes*/
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+    .cookiescript_checkbox_label {
+        position: relative;
+        top:-10px;
+    }
+    #cookiescript_accept, #cookiescript_reject, #cookiescript_save{
+    	display: inline-block;
+    }
+    #cookiescript_buttons{
+    	text-align:center;
+    }
+}
+#cookiescript_save{
+    display: none;
+}
+#cookiescript_reject {
+    border: 1px solid #FFFFFF;
+    text-align: center;
+    line-height: 3;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;
+    background: #2d2d2d;
+}
+
+
+#cookiescript_accept, #cookiescript_reject, #cookiescript_save {
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+    min-width: 103px;
+}
+.cookiescript_bigger {
+    transform: scale(1.1);
+}
+#cookiescript_link {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 9px;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    opacity: 0.8;
+	display:inline !important;
+}
+
+#cookiescript_readmore,
+#cookiescript_reportlink,
+#cookiescript_cookiescriptlink {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    margin: 0;
+    transition: all 100ms ease 0s;
+    background-color: transparent;
+    color: #FFFFFF;
+    display: inline;
+    font-size: 11px;
+}
+
+#cookiescript_description {
+    color: #FFFFFF;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+    line-height: 1.8;
+    font-weight: 400;
+    opacity: 0.85;
+}
+#cookiescript_checkboxs {
+}
+#cookiescript_close:hover,
+#cookiescript_manage:hover,
+#cookiescript_link:hover
+{
+    opacity: 1;
+}
+
+#cookiescript_reject:hover {
+    background-color: #3e3e3e;
+}
+
+#cookiescript_accept:hover,
+#cookiescript_save:hover {
+    background-color: #63b063;
+}
+
+#cookiescript_readmore:hover,
+#cookiescript_reportlink:hover,
+#cookiescript_cookiescriptlink:hover
+{
+    color: #6BBE6B;
+}
+
+#cookiescript_badge {
+    position: fixed;
+    line-height: 0;
+    cursor: pointer;
+    z-index: 99999;
+    font-size: 0;
+    color: #999;
+left: 10px;
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+}
+
+#cookiescript_badgetext{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Open Sans', Arial, 'Trebuchet MS', 'Segoe UI', 'Helvetica', sans-serif;
+    overflow: hidden;
+    transition-duration: 500ms;
+    white-space: nowrap;
+    padding-right: 0;
+    color: #FFFFFF;
+}
+
+#cookiescript_badgesvg{
+    width:40px;
+    height: 40px;
+}
+
+
+
+#cookiescript_badge {
+bottom: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding-top:10px;
+    padding-bottom: 8px;
+    padding-left:12px;
+    padding-right:12px;
+    transition-duration: 200ms;
+    box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.2);
+    background: #2d2d2d;
+}
+#cookiescript_badgetext {
+    font-size: 11px;
+    line-height: 1;
+}
+#cookiescript_badge:hover{
+    padding-bottom: 13px;
+}
+@media only screen and (max-width: 414px) {
+    #cookiescript_badge {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
+
+@media print{
+    #cookiescript_injected{
+        display:none;
+    }
+}
+
+.cookiescript_fullreport,
+.cookiescript_fullreport tbody,
+.cookiescript_fullreport thead,
+.cookiescript_fullreport tr,
+.cookiescript_fullreport th,
+.cookiescript_fullreport td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+table.cookiescript_fullreport {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+#cookiescript_maintabs {
+	display: flex;
+	justify-content: space-around;
+	background: rgba(193, 193, 193, 0.6);
+	align-items: stretch;
+	overflow: hidden;
+	min-height: 36px;
+}
+
+#cookiescript_categories,
+#cookiescript_iab_type {
+	display: flex;
+	justify-content: center;
+	padding: 7px 0;
+	border-bottom: 1px solid #F1F1F1;
+	flex-wrap: wrap;
+}
+
+#cookiescript_cookietablewrap {
+	max-width: 1140px;
+	overflow: hidden;
+    min-height: 216px;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	max-height: 350px;
+	box-sizing: border-box;
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+#cookiescript_cookietablewrap.cookiescript_hidden {
+	opacity: 0.0;
+	height: 0;
+	min-height: 0;
+	max-height: 0;
+	margin: 0;
+}
+
+#cookiescript_reportwrap,
+#cookiescript_iabwrap {
+	height: 137px;
+	overflow: auto;
+}
+
+#cookiescript_reportwrap > div,
+#cookiescript_iabwrap > div {
+	transition: opacity 200ms 0ms, height 0ms 200ms;
+}
+
+.cookiescript_category_description {
+	padding: 7px 10px;
+	font-size: 11px;
+	text-align: left;
+	font-weight: normal;
+	line-height: 1.5;
+	color: #6f6f6f;
+	margin: 0;
+}
+
+.cookiescript_fullreport th {
+	background: #F5F5F5;
+	color: #4b4b4b;
+}
+
+#cookiescript_categories > div,
+#cookiescript_iab_type > div {
+	cursor: pointer;
+	padding: 0 9px;
+	font-size: 11px;
+	font-weight: 600;
+	background: #f5f5f5;
+	color: #4b4b4b;
+	line-height: 2;
+	margin: 3px 5px;
+	white-space: nowrap;
+}
+
+#cookiescript_maintabs > div {
+	cursor: pointer;
+	width: 50%;
+	transition: all 300ms ease 0s;
+	text-transform: uppercase;
+	font-size: 12px;
+	text-align: center;
+	line-height: 1.5;
+	font-weight: 500;
+	color: #FEFEFE;
+	padding: 9px 0;
+	position: relative;
+}
+
+#cookiescript_maintabs .cookiescript_active {
+	background: #fefefe;
+	color: #6BBE6B;
+}
+
+#cookiescript_declarationwrap {
+	background: #FEFEFE;
+	transition: opacity 200ms 0ms, height 0ms 200ms;
+}
+
+#cookiescript_categories .cookiescript_active,
+#cookiescript_iab_type .cookiescript_active {
+	background: #6BBE6B;
+	color: #FEFEFE;
+}
+
+#cookiescript_reportwrap::-webkit-scrollbar-track,
+#cookiescript_iabwrap::-webkit-scrollbar-track,
+#cookiescript_aboutwrap::-webkit-scrollbar-track {
+	background-color: #DADADA;
+}
+
+#cookiescript_reportwrap::-webkit-scrollbar,
+#cookiescript_iabwrap::-webkit-scrollbar,
+#cookiescript_aboutwrap::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+#cookiescript_reportwrap::-webkit-scrollbar-thumb,
+#cookiescript_iabwrap::-webkit-scrollbar-thumb,
+#cookiescript_aboutwrap::-webkit-scrollbar-thumb {
+	background-color: #6BBE6B;
+}
+
+.cookiescript_fullreport {
+	border-collapse: collapse;
+	width: 100%;
+	}
+
+.cookiescript_fullreport td:nth-child(1) {
+	font-weight: 600;
+}
+
+.cookiescript_fullreport td:nth-child(3), .cookiescript_fullreport th:nth-child(3) {
+	text-align: center;
+}
+
+.cookiescript_fullreport td, .cookiescript_fullreport th {
+	white-space: normal;
+	padding: 0 8px;
+	font-size: 11px;
+	font-weight: 600;
+	text-align: left;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.cookiescript_fullreport td {
+	padding: 7px 8px;
+	line-height: 1.3;
+	vertical-align: top;
+	font-weight: 400;
+	border-bottom: 1px solid #F1F1F1;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	color: #6f6f6f;
+	background: transparent;
+}
+.cookiescript_fullreport th {
+	padding: 7px 8px;
+	vertical-align: middle;
+}
+.cookiescript_vendor_name a {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #6f6f6f;
+	line-height: normal;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	font-size: 11px;
+}
+.cookiescript_vendor_name a:hover {
+	color: #000;
+}
+
+.cookiescript_fullreport td:last-child, .cookiescript_fullreport th:last-child {
+	padding-right: 18px;
+}
+
+.cookiescript_fullreport td:nth-child(1), .cookiescript_fullreport th:nth-child(1) {
+	padding-left: 18px;
+	word-break: normal;
+}
+
+#cookiescript_aboutwrap {
+	padding: 7px 18px;
+	font-size: 12px;
+	text-align: left;
+	font-weight: normal;
+	line-height: 1.5;
+	background-color: #fefefe;
+	box-sizing: border-box;
+	color: #6f6f6f;
+	transition: opacity 200ms 0ms;
+	overflow: auto;
+	flex-grow: 0;
+	height: 180px;
+}
+
+#cookiescript_aboutwrap.cookiescript_hidden {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+#cookiescript_declarationwrap.cookiescript_hidden {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+#cookiescript_setting_advertising_wrap {
+    padding: 7px 18px;
+    font-size: 12px;
+    text-align: left;
+    font-weight: normal;
+    line-height: 1.5;
+    background-color: #fefefe;
+    box-sizing: border-box;
+    color: #6f6f6f;
+    transition: opacity 200ms 0ms;
+    overflow: auto;
+    flex-grow: 0;
+    height: 180px;
+}
+
+#cookiescript_setting_advertising_wrap.cookiescript_hidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+#cookiescript_tabscontent {
+	background: #FEFEFE;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+#cookiescript_reportwrap .cookiescript_hidden,
+#cookiescript_iabwrap .cookiescript_hidden {
+	opacity: 0;
+	height: 0;
+	transition: opacity 200ms 0ms, height 0ms 200ms;
+	overflow: hidden;
+}
+#cookiescript_reportdate{
+	font-size: 11px;
+	text-align: right;
+	opacity: 0.9;
+	padding: 0 10px;
+	margin: 0;
+}
+
+#cookiescript_injected.hascookiereport #cookiescript_copyright{
+	display: none;
+}
+
+
+@media only screen and (max-width: 414px) {
+	.cookiescript_fullreport thead {
+		display: none;
+	}
+
+	.cookiescript_fullreport td {
+		display: flex;
+	}
+
+	.cookiescript_fullreport td::before {
+		content: attr(label);
+		font-weight: bold;
+		width: 120px;
+		min-width: 120px;
+	}
+
+	.cookiescript_category_description,
+	.cookiescript_fullreport td,
+	.cookiescript_fullreport td:nth-child(1),
+	.cookiescript_fullreport td:nth-child(3) {
+		padding: 7px 10px;
+		text-align: left;
+	}
+
+	.cookiescript_fullreport td:last-child {
+		border-bottom: none;
+	}
+
+	.cookiescript_fullreport tr:nth-child(even) {
+		background: #f5f5f5;
+	}
+
+.cookiescript_fullreport tr:nth-child(even) td {
+    border-bottom: 1px solid #FFF;
+	}
+}
+
+
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+	#cookiescript_maintabs > div{
+		display:block;
+		float:left;
+	}
+	#cookiescript_categories > div,
+	#cookiescript_iab_type > div{
+		display:inline-block;
+	}
+
+}
+
+
+#cookiescript_categories > div,
+#cookiescript_iab_type > div {
+	border-radius: 20px;
+}
+#cookiescript_reportwrap::-webkit-scrollbar-track,
+#cookiescript_iabwrap::-webkit-scrollbar-track,
+#cookiescript_aboutwrap::-webkit-scrollbar-track {
+	border-radius: 6px;
+}
+#cookiescript_reportwrap::-webkit-scrollbar-thumb,
+#cookiescript_iabwrap::-webkit-scrollbar-thumb,
+#cookiescript_aboutwrap::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+}
+#cookiescript_maintabs {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#cookiescript_tabscontent {
+	
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+
+
+.cookiescript_rtl {
+    direction:rtl;
+}
+
+
+/*Start Checkboxes*/
+#cookiescript_injected_fsd .mdc-checkbox,
+#cookiescript_injected .mdc-checkbox {
+    box-sizing: content-box !important;
+}
+#cookiescript_injected_fsd .mdc-checkbox__native-control,
+#cookiescript_injected .mdc-checkbox__native-control {
+    display: block;
+    z-index: 1;
+}
+#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:focus~.mdc-checkbox__background::before, 
+#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:focus~.mdc-checkbox__background::before, 
+#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before,
+#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before {
+    background-color: #FFFFFF;
+}
+
+#cookiescript_injected .mdc-checkbox,#cookiescript_injected_fsd .mdc-checkbox{display:inline-block;position:relative;flex:0 0 18px;box-sizing:content-box;width:18px;height:18px;line-height:0;white-space:nowrap;cursor:pointer;vertical-align:bottom;padding:11px}#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:checked~.mdc-checkbox__background::before,#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:checked~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before{background-color:#FFFFFF}@supports not (-ms-ime-align:auto){#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:checked~.mdc-checkbox__background::before,#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:checked~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before{background-color:var(--mdc-theme-secondary, #FFFFFF)}}#cookiescript_injected .mdc-checkbox .mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__background{top:11px;left:11px}#cookiescript_injected .mdc-checkbox .mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__background::before{top:-13px;left:-13px;width:40px;height:40px}#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control{top:0;right:0;left:0;width:40px;height:40px}#cookiescript_injected .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate)~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate)~.mdc-checkbox__background{border-color:#FFFFFF;background-color:transparent}#cookiescript_injected .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background,#cookiescript_injected .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background{border-color:#FFFFFF;background-color:#FFFFFF}#cookiescript_injected .mdc-checkbox__native-control[disabled]:not(:checked):not(:indeterminate)~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control[disabled]:not(:checked):not(:indeterminate)~.mdc-checkbox__background{border-color:rgba(255,255,255,0.26);background-color:transparent}#cookiescript_injected .mdc-checkbox__native-control[disabled]:checked~.mdc-checkbox__background,#cookiescript_injected .mdc-checkbox__native-control[disabled]:indeterminate~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control[disabled]:checked~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control[disabled]:indeterminate~.mdc-checkbox__background{border-color:transparent;background-color:rgba(255,255,255,0.26)}#cookiescript_injected .mdc-checkbox__native-control:enabled~.mdc-checkbox__background .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__native-control:enabled~.mdc-checkbox__background .mdc-checkbox__checkmark{color:#2d2d2d}#cookiescript_injected .mdc-checkbox__native-control:disabled~.mdc-checkbox__background .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__native-control:disabled~.mdc-checkbox__background .mdc-checkbox__checkmark{color:#2d2d2d}#cookiescript_injected .mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__background{display:inline-flex;position:absolute;align-items:center;justify-content:center;box-sizing:border-box;width:18px;height:18px;border:2px solid #FFFFFF;border-radius:2px;background-color:transparent;pointer-events:none;will-change:background-color,border-color;transition:background-color 90ms 0s cubic-bezier(.4,0,.6,1),border-color 90ms 0s cubic-bezier(.4,0,.6,1)}#cookiescript_injected .mdc-checkbox__background .mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox__background .mdc-checkbox__background::before{background-color:#000}@supports not (-ms-ime-align:auto){#cookiescript_injected .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__checkmark{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;opacity:0;transition:opacity 180ms 0s cubic-bezier(.4,0,.6,1)}#cookiescript_injected .mdc-checkbox__checkmark-path,#cookiescript_injected_fsd .mdc-checkbox__checkmark-path{transition:stroke-dashoffset 180ms 0s cubic-bezier(.4,0,.6,1);stroke:currentColor;stroke-width:3.12px;stroke-dashoffset:29.7833385;stroke-dasharray:29.7833385}#cookiescript_injected .mdc-checkbox__native-control:checked~.mdc-checkbox__background,#cookiescript_injected .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:checked~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background{transition:border-color 90ms 0s cubic-bezier(0,0,.2,1),background-color 90ms 0s cubic-bezier(0,0,.2,1)}#cookiescript_injected .mdc-checkbox__native-control:checked~.mdc-checkbox__background .mdc-checkbox__checkmark-path,#cookiescript_injected .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background .mdc-checkbox__checkmark-path,#cookiescript_injected_fsd .mdc-checkbox__native-control:checked~.mdc-checkbox__background .mdc-checkbox__checkmark-path,#cookiescript_injected_fsd .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background .mdc-checkbox__checkmark-path{stroke-dashoffset:0}#cookiescript_injected .mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox__background::before{position:absolute;-webkit-transform:scale(0,0);transform:scale(0,0);border-radius:50%;opacity:0;pointer-events:none;content:"";will-change:opacity,transform;transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),-webkit-transform 90ms 0s cubic-bezier(.4,0,.6,1);transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),transform 90ms 0s cubic-bezier(.4,0,.6,1);transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),transform 90ms 0s cubic-bezier(.4,0,.6,1),-webkit-transform 90ms 0s cubic-bezier(.4,0,.6,1)}#cookiescript_injected .mdc-checkbox__native-control:focus~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox__native-control:focus~.mdc-checkbox__background::before{-webkit-transform:scale(1);transform:scale(1);opacity:.12;transition:opacity 80ms 0s cubic-bezier(0,0,.2,1),-webkit-transform 80ms 0s cubic-bezier(0,0,.2,1);transition:opacity 80ms 0s cubic-bezier(0,0,.2,1),transform 80ms 0s cubic-bezier(0,0,.2,1);transition:opacity 80ms 0s cubic-bezier(0,0,.2,1),transform 80ms 0s cubic-bezier(0,0,.2,1),-webkit-transform 80ms 0s cubic-bezier(0,0,.2,1)}#cookiescript_injected .mdc-checkbox__native-control,#cookiescript_injected_fsd .mdc-checkbox__native-control{position:absolute;margin:0;padding:0;opacity:0;cursor:inherit}#cookiescript_injected .mdc-checkbox__native-control:disabled,#cookiescript_injected_fsd .mdc-checkbox__native-control:disabled{cursor:default;pointer-events:none}#cookiescript_injected .mdc-checkbox__native-control:checked~.mdc-checkbox__background .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__native-control:checked~.mdc-checkbox__background .mdc-checkbox__checkmark{transition:opacity 180ms 0s cubic-bezier(0,0,.2,1),-webkit-transform 180ms 0s cubic-bezier(0,0,.2,1);transition:opacity 180ms 0s cubic-bezier(0,0,.2,1),transform 180ms 0s cubic-bezier(0,0,.2,1);transition:opacity 180ms 0s cubic-bezier(0,0,.2,1),transform 180ms 0s cubic-bezier(0,0,.2,1),-webkit-transform 180ms 0s cubic-bezier(0,0,.2,1);opacity:1}#cookiescript_injected .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background .mdc-checkbox__checkmark{-webkit-transform:rotate(45deg);transform:rotate(45deg);opacity:0;transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),-webkit-transform 90ms 0s cubic-bezier(.4,0,.6,1);transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),transform 90ms 0s cubic-bezier(.4,0,.6,1);transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),transform 90ms 0s cubic-bezier(.4,0,.6,1),-webkit-transform 90ms 0s cubic-bezier(.4,0,.6,1)}#cookiescript_injected .mdc-checkbox,#cookiescript_injected_fsd .mdc-checkbox{-webkit-tap-highlight-color:transparent}}
+/*End Checkboxes*/
+
+
+/*Start Toggle*/
+
+#cookiescript_injected .mdc-elevation-overlay,#cookiescript_injected_fsd .mdc-elevation-overlay{position:absolute;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity 280ms cubic-bezier(.4,0,.2,1);background-color:#fff}#cookiescript_injected .mdc-switch,#cookiescript_injected_fsd .mdc-switch{align-items:center;background:0 0;border:none;cursor:pointer;display:inline-flex;flex-shrink:0;margin:0;outline:0;overflow:visible;padding:0;position:relative}#cookiescript_injected .mdc-switch:disabled,#cookiescript_injected_fsd .mdc-switch:disabled{cursor:default;pointer-events:none}#cookiescript_injected .mdc-switch input[type=checkbox],#cookiescript_injected_fsd .mdc-switch input[type=checkbox]{display:none;visibility:hidden}#cookiescript_injected .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch__track{overflow:hidden;position:relative;width:100%}#cookiescript_injected .mdc-switch__track::after,#cookiescript_injected .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch__track::before{border:1px solid transparent;border-radius:inherit;box-sizing:border-box;content:"";height:100%;left:0;position:absolute;width:100%}#cookiescript_injected .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch__track::before{transition:-webkit-transform 75ms 0s cubic-bezier(0,0,.2,1);transition:transform 75ms 0s cubic-bezier(0,0,.2,1);-webkit-transform:translateX(0);transform:translateX(0)}#cookiescript_injected .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch__track::after{transition:-webkit-transform 75ms 0s cubic-bezier(.4,0,.6,1);transition:transform 75ms 0s cubic-bezier(.4,0,.6,1);-webkit-transform:translateX(-100%);transform:translateX(-100%)}#cookiescript_injected .mdc-switch__track[dir=rtl]::after,#cookiescript_injected [dir=rtl] .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch__track[dir=rtl]::after,#cookiescript_injected_fsd [dir=rtl] .mdc-switch__track::after{-webkit-transform:translateX(100%);transform:translateX(100%)}#cookiescript_injected .mdc-switch--selected .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__track::before{transition:-webkit-transform 75ms 0s cubic-bezier(.4,0,.6,1);transition:transform 75ms 0s cubic-bezier(.4,0,.6,1);-webkit-transform:translateX(100%);transform:translateX(100%)}#cookiescript_injected .mdc-switch--selected .mdc-switch__track[dir=rtl]::before,#cookiescript_injected [dir=rtl] .mdc-switch--selected .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__track[dir=rtl]::before,#cookiescript_injected_fsd [dir=rtl] .mdc-switch--selected .mdc-switch__track::before{-webkit-transform:translateX(-100%);transform:translateX(-100%)}#cookiescript_injected .mdc-switch--selected .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__track::after{transition:-webkit-transform 75ms 0s cubic-bezier(0,0,.2,1);transition:transform 75ms 0s cubic-bezier(0,0,.2,1);-webkit-transform:translateX(0);transform:translateX(0)}#cookiescript_injected .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch__handle-track{height:100%;pointer-events:none;position:absolute;top:0;transition:-webkit-transform 75ms 0s cubic-bezier(.4,0,.2,1);transition:transform 75ms 0s cubic-bezier(.4,0,.2,1);left:0;right:auto;-webkit-transform:translateX(0);transform:translateX(0)}#cookiescript_injected .mdc-switch__handle-track[dir=rtl],#cookiescript_injected [dir=rtl] .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch__handle-track[dir=rtl],#cookiescript_injected_fsd [dir=rtl] .mdc-switch__handle-track{left:auto;right:0}#cookiescript_injected .mdc-switch--selected .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__handle-track{-webkit-transform:translateX(100%);transform:translateX(100%)}#cookiescript_injected .mdc-switch--selected .mdc-switch__handle-track[dir=rtl],#cookiescript_injected [dir=rtl] .mdc-switch--selected .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__handle-track[dir=rtl],#cookiescript_injected_fsd [dir=rtl] .mdc-switch--selected .mdc-switch__handle-track{-webkit-transform:translateX(-100%);transform:translateX(-100%)}#cookiescript_injected .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch__handle{display:flex;pointer-events:auto;position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:0;right:auto}#cookiescript_injected .mdc-switch__handle[dir=rtl],#cookiescript_injected [dir=rtl] .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch__handle[dir=rtl],#cookiescript_injected_fsd [dir=rtl] .mdc-switch__handle{left:auto;right:0}#cookiescript_injected .mdc-switch__handle::after,#cookiescript_injected .mdc-switch__handle::before,#cookiescript_injected_fsd .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch__handle::before{border:1px solid transparent;border-radius:inherit;box-sizing:border-box;content:"";width:100%;height:100%;left:0;position:absolute;top:0;transition:background-color 75ms 0s cubic-bezier(.4,0,.2,1),border-color 75ms 0s cubic-bezier(.4,0,.2,1);z-index:-1}#cookiescript_injected .mdc-switch__shadow,#cookiescript_injected_fsd .mdc-switch__shadow{border-radius:inherit;bottom:0;left:0;position:absolute;right:0;top:0}#cookiescript_injected .mdc-elevation-overlay,#cookiescript_injected_fsd .mdc-elevation-overlay{bottom:0;left:0;right:0;top:0}#cookiescript_injected .mdc-switch__ripple,#cookiescript_injected_fsd .mdc-switch__ripple{left:50%;position:absolute;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:-1}#cookiescript_injected .mdc-switch:disabled .mdc-switch__ripple,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__ripple{display:none}#cookiescript_injected .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch__icons{height:100%;position:relative;width:100%;z-index:1}#cookiescript_injected .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch__icon{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0;opacity:0;transition:opacity 30ms 0s cubic-bezier(.4,0,1,1)}#cookiescript_injected .mdc-switch--selected .mdc-switch__icon--on,#cookiescript_injected .mdc-switch--unselected .mdc-switch__icon--off,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__icon--on,#cookiescript_injected_fsd .mdc-switch--unselected .mdc-switch__icon--off{opacity:1;transition:opacity 45ms 30ms cubic-bezier(0,0,.2,1)}#cookiescript_injected .mdc-switch,#cookiescript_injected_fsd .mdc-switch{will-change:transform,opacity}@-webkit-keyframes mdc-ripple-fg-radius-in{from{-webkit-animation-timing-function:cubic-bezier(.4,0,.2,1);animation-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}to{-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}}@keyframes mdc-ripple-fg-radius-in{from{-webkit-animation-timing-function:cubic-bezier(.4,0,.2,1);animation-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}to{-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}}@-webkit-keyframes mdc-ripple-fg-opacity-in{from{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:0}to{opacity:.1}}@keyframes mdc-ripple-fg-opacity-in{from{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:0}to{opacity:.1}}@-webkit-keyframes mdc-ripple-fg-opacity-out{from{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:.1}to{opacity:0}}@keyframes mdc-ripple-fg-opacity-out{from{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:.1}to{opacity:0}}#cookiescript_injected .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::before{position:absolute;border-radius:50%;opacity:0;pointer-events:none;content:""}#cookiescript_injected .mdc-switch .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::before{transition:opacity 15ms linear,background-color 15ms linear;z-index:1}#cookiescript_injected .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::after{z-index:0}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::before{-webkit-transform:scale(1);transform:scale(1)}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after{top:0;left:0;-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:center center;transform-origin:center center}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded--unbounded .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded--unbounded .mdc-switch__ripple::after{top:0;left:0}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded--foreground-activation .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded--foreground-activation .mdc-switch__ripple::after{-webkit-animation:mdc-ripple-fg-radius-in 225ms forwards,mdc-ripple-fg-opacity-in 75ms forwards;animation:mdc-ripple-fg-radius-in 225ms forwards,mdc-ripple-fg-opacity-in 75ms forwards}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded--foreground-deactivation .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded--foreground-deactivation .mdc-switch__ripple::after{-webkit-animation:mdc-ripple-fg-opacity-out 150ms;animation:mdc-ripple-fg-opacity-out 150ms;-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}#cookiescript_injected .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::before{top:calc(50% - 50%);left:calc(50% - 50%);width:100%;height:100%}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::before{top:0;left:0;width:0;height:0}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after{width:0;height:0}#cookiescript_injected .mdc-switch,#cookiescript_injected_fsd .mdc-switch{width:36px}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled .mdc-switch__handle::after{background:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus):not(:active) .mdc-switch__handle::after{background:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus:not(:active) .mdc-switch__handle::after{background:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__handle::after{background:}#cookiescript_injected .mdc-switch.mdc-switch--selected:disabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:disabled .mdc-switch__handle::after{background:#424242}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled .mdc-switch__handle::after{background:#616161}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus):not(:active) .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus):not(:active) .mdc-switch__handle::after{background:#212121}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus:not(:active) .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus:not(:active) .mdc-switch__handle::after{background:#212121}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__handle::after{background:#212121}#cookiescript_injected .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__handle::after{background:#424242}#cookiescript_injected .mdc-switch .mdc-switch__handle::before,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle::before{background:#fff}#cookiescript_injected .mdc-switch:enabled .mdc-switch__shadow,#cookiescript_injected_fsd .mdc-switch:enabled .mdc-switch__shadow{box-shadow:0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);--mdc-elevation-box-shadow-for-gss:0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0, 0, 0, 0.12)}#cookiescript_injected .mdc-switch:disabled .mdc-switch__shadow,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__shadow{box-shadow:0 0 0 0 rgba(0,0,0,.2),0 0 0 0 rgba(0,0,0,.14),0 0 0 0 rgba(0,0,0,.12);--mdc-elevation-box-shadow-for-gss:0px 0px 0px 0px rgba(0, 0, 0, 0.2),0px 0px 0px 0px rgba(0, 0, 0, 0.14),0px 0px 0px 0px rgba(0, 0, 0, 0.12)}#cookiescript_injected .mdc-switch .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle{height:20px}#cookiescript_injected .mdc-switch:disabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__handle::after{opacity:.38}#cookiescript_injected .mdc-switch .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle{border-radius:10px}#cookiescript_injected .mdc-switch .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle{width:20px}#cookiescript_injected .mdc-switch .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle-track{width:calc(100% - 20px)}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled .mdc-switch__icon{fill:#fff}#cookiescript_injected .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icon{fill:#fff}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled .mdc-switch__icon{fill:#fff}#cookiescript_injected .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icon{fill:#fff}#cookiescript_injected .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icons{opacity:.38}#cookiescript_injected .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icons{opacity:.38}#cookiescript_injected .mdc-switch.mdc-switch--selected .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected .mdc-switch__icon{width:18px;height:18px}#cookiescript_injected .mdc-switch.mdc-switch--unselected .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected .mdc-switch__icon{width:18px;height:18px}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus) .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus) .mdc-switch__ripple::before{background-color:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus .mdc-switch__ripple::before{background-color:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__ripple::before{background-color:}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus) .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus) .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus) .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus) .mdc-switch__ripple::before{background-color:#424242}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus .mdc-switch__ripple::before{background-color:#424242}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__ripple::before{background-color:#424242}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus).mdc-ripple-surface--hover .mdc-switch__ripple::before,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus):hover .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus).mdc-ripple-surface--hover .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus):hover .mdc-switch__ripple::before{opacity:.04}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus.mdc-ripple-upgraded--background-focused .mdc-switch__ripple::before,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus:not(.mdc-ripple-upgraded):focus .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:focus.mdc-ripple-upgraded--background-focused .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:focus:not(.mdc-ripple-upgraded):focus .mdc-switch__ripple::before{transition-duration:75ms;opacity:.12}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active:not(.mdc-ripple-upgraded) .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:active:not(.mdc-ripple-upgraded) .mdc-switch__ripple::after{transition:opacity 150ms linear}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active:not(.mdc-ripple-upgraded):active .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:active:not(.mdc-ripple-upgraded):active .mdc-switch__ripple::after{transition-duration:75ms;opacity:.1}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus).mdc-ripple-surface--hover .mdc-switch__ripple::before,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus):hover .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus).mdc-ripple-surface--hover .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus):hover .mdc-switch__ripple::before{opacity:.04}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus.mdc-ripple-upgraded--background-focused .mdc-switch__ripple::before,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus:not(.mdc-ripple-upgraded):focus .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus.mdc-ripple-upgraded--background-focused .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus:not(.mdc-ripple-upgraded):focus .mdc-switch__ripple::before{transition-duration:75ms;opacity:.12}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active:not(.mdc-ripple-upgraded) .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active:not(.mdc-ripple-upgraded) .mdc-switch__ripple::after{transition:opacity 150ms linear}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active:not(.mdc-ripple-upgraded):active .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active:not(.mdc-ripple-upgraded):active .mdc-switch__ripple::after{transition-duration:75ms;opacity:.1}#cookiescript_injected .mdc-switch .mdc-switch__ripple,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple{height:48px;width:48px}#cookiescript_injected .mdc-switch .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch .mdc-switch__track{height:14px}#cookiescript_injected .mdc-switch:disabled .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__track{opacity:.12}#cookiescript_injected .mdc-switch:enabled .mdc-switch__track::after{background:;opacity:0.3}#cookiescript_injected .mdc-switch:enabled:hover:not(:focus):not(:active) .mdc-switch__track::after{background:;opacity:0.3}#cookiescript_injected .mdc-switch:enabled:focus:not(:active) .mdc-switch__track::after{background:;opacity:0.3}#cookiescript_injected .mdc-switch:enabled:active .mdc-switch__track::after{background:;opacity:0.3}#cookiescript_injected .mdc-switch:disabled .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__track::after{background:#424242}#cookiescript_injected .mdc-switch:enabled .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:enabled .mdc-switch__track::before{background:#e0e0e0}#cookiescript_injected .mdc-switch:enabled:hover:not(:focus):not(:active) .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:enabled:hover:not(:focus):not(:active) .mdc-switch__track::before{background:#e0e0e0}#cookiescript_injected .mdc-switch:enabled:focus:not(:active) .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:enabled:focus:not(:active) .mdc-switch__track::before{background:#e0e0e0}#cookiescript_injected .mdc-switch:enabled:active .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:enabled:active .mdc-switch__track::before{background:#e0e0e0}#cookiescript_injected .mdc-switch:disabled .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__track::before{background:#424242}#cookiescript_injected .mdc-switch .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch .mdc-switch__track{border-radius:7px}@media screen and (forced-colors:active),(-ms-high-contrast:active){#cookiescript_injected .mdc-switch:disabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__handle::after{opacity:1}#cookiescript_injected .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icons{opacity:1}#cookiescript_injected .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icons{opacity:1}#cookiescript_injected .mdc-switch:disabled .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__track{opacity:1}}
+/*End Toggle*/
+
+#cookiescript_injected {
+bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    padding: 15px 50px 15px 50px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+    max-height: 85%;
+    overflow-y: auto;
+    align-items: center;
+}
+#cookiescript_toppart,#cookiescript_bottompart {
+	width: 100%;
+}
+#cookiescript_toppart{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+    margin: 0;
+}
+#cookiescript_rightpart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+	min-width: 25%;
+}
+#cookiescript_copyright {
+    text-align: left;
+    line-height: 1;
+    margin:4px 0 0 0;
+}
+
+#cookiescript_buttons {
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0;
+    font-weight: 700;
+    width:100%;
+	flex-direction: column;
+}
+
+#cookiescript_manage_wrap {
+    margin: 3px 0 10px 0;
+	text-align: left;
+}
+#cookiescript_header {
+    margin: 0 0 10px 0;
+    text-align: left;
+    padding: 14px 0 0 0;
+}
+#cookiescript_checkboxs {
+    margin: 0 0 0 -11px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cookiescript_checkbox_label{
+    padding: 0;
+    margin: 0 10px 0 -2px;
+}
+.cookiescript_checkbox {
+    margin: 0;
+}
+#cookiescript_accept, #cookiescript_reject, #cookiescript_save {
+    margin: 5px 7px;
+    flex-shrink: 1;
+    padding: 0 17px;
+}
+#cookiescript_description{
+    text-align: left;
+    font-size: 12px;
+    margin: 0;
+}
+#cookiescript_readmore{
+	font-size: 12px;
+}
+#cookiescript_leftpart {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 65%;
+}
+
+#cookiescript_injected.hascookiereport #cookiescript_rightpart{
+	align-items:baseline;
+}
+#cookiescript_leftpart{
+	-ms-flex: 0 1 741px;
+}
+#cookiescript_rightpart, {
+	-ms-flex: 0 1 285px;
+}
+#cookiescript_buttons{
+	-ms-flex: 0 1 100%;
+}
+#cookiescript_cookietablewrap {
+    transition: height 300ms 0ms, min-height 300ms 0ms, max-height 300ms 0ms, opacity 200ms 300ms;
+}
+#cookiescript_cookietablewrap.cookiescript_hidden {
+    transition: height 300ms 0ms, min-height 300ms 0ms, max-height 300ms 0ms, opacity 200ms 0ms;
+}
+@media only screen and (max-width: 1024px){
+    #cookiescript_buttons {
+        flex-wrap: wrap;
+    }
+    #cookiescript_accept, #cookiescript_reject, #cookiescript_save{
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 700px) {
+	#cookiescript_injected{
+		padding: 15px 20px;
+	}
+	#cookiescript_toppart{
+		flex-direction: column;
+	}
+	#cookiescript_leftpart,#cookiescript_rightpart{
+		width:100%;
+		max-width:100%;
+		margin: 0;
+		-ms-flex:none;
+	}
+	#cookiescript_buttons {
+        flex-wrap: wrap;
+        width:100%;
+		flex-direction: row;
+    }
+    #cookiescript_accept, #cookiescript_reject, #cookiescript_save{
+		flex-grow: 1;
+    }
+    .hascookiereport #cookiescript_toppart{
+    	margin-bottom:10px;
+    }
+    
+}
+@media only screen and (max-width: 414px) {
+    #cookiescript_injected{
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+    }
+    #cookiescript_rightpart{
+        flex-direction: column;
+    }
+
+    #cookiescript_buttons{
+        flex-wrap: wrap;
+    }
+}
+
+#cookiescript_accept, #cookiescript_reject, #cookiescript_save {
+	border-radius: 20px;
+}
+/*IE 9 fixes*/
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+	.cookiescript_checkbox{
+		display: inline-block;
+	}
+	#cookiescript_buttons{
+		margin-top:5%;
+	}
+	#cookiescript_leftpart{
+		float:left;
+		width:60%;
+	}
+	#cookiescript_rightpart{
+		float:right;
+		width:38%;
+		margin: 0;
+	}
+	#cookiescript_injected{
+		padding: 15px 20px;
+	}
+	#cookiescript_accept, #cookiescript_reject, #cookiescript_save {
+		white-space: normal;
+	}
+	#cookiescript_injected {
+		max-height: 100%;
+	}
+}
+
+
+    </style>
+  <div id="cookiescript_injected" tabindex="0" role="alert" aria-live="assertive" data-nosnippet="" class="" style="">
+  <div id="cookiescript_toppart">
+  <div id="cookiescript_leftpart">
+      <div id="cookiescript_description">
+    <span data-cs-desc-box="true" data-cs-i18n-text="{&quot;en&quot;:&quot;Capsim.com uses cookies to improve your experience. By continuing to browse our website, you agree to our&quot;}" data-cs-i18n-read="Capsim.com uses cookies to improve your experience. By continuing to browse our website, you agree to our">Capsim.com uses cookies to improve your experience. By continuing to browse our website, you agree to our</span>
+
+    
+      
+      <a id="cookiescript_readmore" data-cs-i18n-text="{&quot;en&quot;:&quot;Privacy Policy.&quot;}" data-cs-i18n-url="{&quot;en&quot;:&quot;https:\/\/www.capsim.com\/privacy-policy&quot;}" href="https://www.capsim.com/privacy-policy" target="_blank">Privacy Policy.</a>
+
+      </div>
+
+  <div id="cookiescript_manage_wrap" tabindex="0" role="button">
+    <div id="cookiescript_manage">
+      <svg id="cookiescript_manageicon" viewBox="0 0 9.62 9.57">
+        <g id="Layer_2">
+          <g id="Layer_1-2">
+            <path class="cookiescript_gear" d="M9.46,6.06l-1.1-.78c0-.16.06-.31.06-.47a1.27,1.27,0,0,0-.06-.47L9.57,3.4l-1.15-2L7,1.93a2.74,2.74,0,0,0-.83-.47L6,0H3.61L3.35,1.46a7.14,7.14,0,0,0-.79.47L1.15,1.36,0,3.4l1.15.94c0,.16,0,.31,0,.47a1.51,1.51,0,0,0,0,.47l-1,.78A.75.75,0,0,0,0,6.17l1.15,2,1.41-.58a2.49,2.49,0,0,0,.84.47l.21,1.47H6a.53.53,0,0,1,0-.21L6.22,8.1a4,4,0,0,0,.84-.47l1.41.58,1.15-2A.75.75,0,0,0,9.46,6.06Zm-4.65.19A1.47,1.47,0,1,1,6.28,4.78,1.47,1.47,0,0,1,4.81,6.25Z"></path>
+          </g>
+        </g>
+      </svg>
+      <span data-cs-show-title="cookie-script" data-cs-i18n-text="{&quot;en&quot;:&quot;Show details&quot;}">Show details</span>
+      <span style="display: none" data-cs-hide-title="cookie-script" data-cs-i18n-text="{&quot;en&quot;:&quot;Hide details&quot;}">Hide details</span>
+    </div>
+  </div>
+  </div>
+  <div id="cookiescript_rightpart">
+      <div id="cookiescript_buttons">
+          <div id="cookiescript_save" tabindex="0" role="button" data-cs-i18n-text="{&quot;en&quot;:&quot;Save &amp; Close&quot;}">Save &amp; Close</div>
+              <div id="cookiescript_accept" tabindex="0" role="button" data-cs-i18n-text="{&quot;en&quot;:&quot;Continue&quot;}">Continue</div>
+              <div id="cookiescript_reject" tabindex="0" role="button" data-cs-i18n-text="{&quot;en&quot;:&quot;Decline all&quot;}">Decline all</div>
+      </div>
+  </div>
+</div>
+<div id="cookiescript_bottompart">
+		<div class="cookiescript_hidden" id="cookiescript_cookietablewrap">
+		  <div id="cookiescript_checkboxs">
+          
+            <div class="cookiescript_checkbox">
+        <div class="mdc-checkbox">
+          <input id="cookiescript_category_strict" data-cookiescript="checkbox-input" type="checkbox" class="mdc-checkbox__native-control cookiescript_checkbox_input" value="strict" disabled="disabled" checked="checked">
+          <div class="mdc-checkbox__background">
+            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+              <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+            </svg>
+          </div>
+        </div>
+        <label class="cookiescript_checkbox_label" for="cookiescript_category_strict">
+          <span class="cookiescript_checkbox_text" data-cs-i18n-text="{&quot;en&quot;:&quot;Necessary&quot;}">Necessary</span>
+        </label>
+      </div>
+
+          
+            <div class="cookiescript_checkbox">
+        <div class="mdc-checkbox">
+          <input id="cookiescript_category_performance" data-cookiescript="checkbox-input" type="checkbox" class="mdc-checkbox__native-control cookiescript_checkbox_input" value="performance">
+          <div class="mdc-checkbox__background">
+            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+              <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+            </svg>
+          </div>
+        </div>
+        <label class="cookiescript_checkbox_label" for="cookiescript_category_performance">
+          <span class="cookiescript_checkbox_text" data-cs-i18n-text="{&quot;en&quot;:&quot;Performance&quot;}">Performance</span>
+        </label>
+      </div>
+
+          
+            <div class="cookiescript_checkbox">
+        <div class="mdc-checkbox">
+          <input id="cookiescript_category_targeting" data-cookiescript="checkbox-input" type="checkbox" class="mdc-checkbox__native-control cookiescript_checkbox_input" value="targeting">
+          <div class="mdc-checkbox__background">
+            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+              <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+            </svg>
+          </div>
+        </div>
+        <label class="cookiescript_checkbox_label" for="cookiescript_category_targeting">
+          <span class="cookiescript_checkbox_text" data-cs-i18n-text="{&quot;en&quot;:&quot;Targeting&quot;}">Targeting</span>
+        </label>
+      </div>
+
+          
+            <div class="cookiescript_checkbox">
+        <div class="mdc-checkbox">
+          <input id="cookiescript_category_functionality" data-cookiescript="checkbox-input" type="checkbox" class="mdc-checkbox__native-control cookiescript_checkbox_input" value="functionality">
+          <div class="mdc-checkbox__background">
+            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+              <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+            </svg>
+          </div>
+        </div>
+        <label class="cookiescript_checkbox_label" for="cookiescript_category_functionality">
+          <span class="cookiescript_checkbox_text" data-cs-i18n-text="{&quot;en&quot;:&quot;Functionality&quot;}">Functionality</span>
+        </label>
+      </div>
+
+            </div>
+
+    <div id="cookiescript_maintabs" data-cs-maintabs="cookiescript">
+      <div id="cookiescript_declaration" class="cookiescript_active" data-cs-maintab="declaration" data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie declaration&quot;}">Cookie declaration</div>
+      <div id="cookiescript_aboutcookies" data-cs-maintab="aboutcookies" data-cs-i18n-text="{&quot;en&quot;:&quot;About cookies&quot;}">About cookies</div>
+          </div>
+    <div id="cookiescript_tabscontent">
+      <div id="cookiescript_declarationwrap" data-cs-maintab-content="declaration">
+        <div id="cookiescript_categories" data-cs-tabs="cookiescript">
+                      <div class="cookiescript_category_strict  cookiescript_active" data-cs-tab="strict" data-cs-i18n-text="{&quot;en&quot;:&quot;Necessary&quot;}">Necessary</div>
+                      <div class="cookiescript_category_performance  " data-cs-tab="performance" data-cs-i18n-text="{&quot;en&quot;:&quot;Performance&quot;}">Performance</div>
+                      <div class="cookiescript_category_targeting  " data-cs-tab="targeting" data-cs-i18n-text="{&quot;en&quot;:&quot;Targeting&quot;}">Targeting</div>
+                      <div class="cookiescript_category_functionality  " data-cs-tab="functionality" data-cs-i18n-text="{&quot;en&quot;:&quot;Functionality&quot;}">Functionality</div>
+                  </div>
+        <div id="cookiescript_reportwrap">
+                                  <div class="cookiescript_report_strict " data-cs-tab-content="strict">
+              <div class="cookiescript_category_description" data-cs-i18n-text="{&quot;en&quot;:&quot;Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies.&quot;}">Strictly
+ necessary cookies allow core website functionality such as user login 
+and account management. The website cannot be used properly without 
+strictly necessary cookies.</div>
+              <div class="cookiescript_tablewrap">
+                <table class="cookiescript_fullreport" data-cs-table-report="cookiescript">
+                    <caption style="display: none;">Cookie report</caption>
+                  <thead>
+                  <tr>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Name&quot;}">Name</th>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Provider&quot;} / {&quot;en&quot;:&quot;Domain&quot;}">
+                      Provider / Domain                    </th>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Expiration&quot;}">Expiration</th>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Description&quot;}">Description</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                                      <tr>
+                      <td label="Name">__cfruid</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://www.cloudflare.com/privacypolicy">Cloudflare Inc.</a>                          </div>
+                                                .www.sprocketrocket.co                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie associated with sites using CloudFlare, used to identify trusted web traffic.&quot;}" label="Description">Cookie associated with sites using CloudFlare, used to identify trusted web traffic.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">hs_ab_test</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://legal.hubspot.com/privacy-policy">HubSpot Inc.</a>                          </div>
+                                                www.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is used to consistently serve visitors the same version of an A\/B test page they\u2019ve seen before.&quot;}" label="Description">This cookie is used to consistently serve visitors the same version of an A/B test page they’ve seen before.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">__cfruid</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://www.cloudflare.com/privacypolicy">Cloudflare Inc.</a>                          </div>
+                                                .www.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie associated with sites using CloudFlare, used to identify trusted web traffic.&quot;}" label="Description">Cookie associated with sites using CloudFlare, used to identify trusted web traffic.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">CFID</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://www.adobe.com/privacy/policy.html">Adobe Inc.</a>                          </div>
+                                                ww2.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by Adobe ColdFusion applications. Used in conjunction with CFTOKEN this cookie helps to uniquely identify a client device (browser) to enable the site to maintain user session variables. How those are used are specific to the site. CFID contains a sequential number to identify the client.&quot;}" label="Description">Cookie
+ set by Adobe ColdFusion applications. Used in conjunction with CFTOKEN 
+this cookie helps to uniquely identify a client device (browser) to 
+enable the site to maintain user session variables. How those are used 
+are specific to the site. CFID contains a sequential number to identify 
+the client.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">CFTOKEN</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://www.adobe.com/privacy/policy.html">Adobe Inc.</a>                          </div>
+                                                ww2.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by Adobe ColdFusion applications. Used in conjunction with CFID this cookie helps to uniquely identify a client device (browser) to enable the site to maintain user session variables. How those are used are specific to the site. CFTOKEN contains a random number to identify the client.&quot;}" label="Description">Cookie
+ set by Adobe ColdFusion applications. Used in conjunction with CFID 
+this cookie helps to uniquely identify a client device (browser) to 
+enable the site to maintain user session variables. How those are used 
+are specific to the site. CFTOKEN contains a random number to identify 
+the client.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">PCSESSIONID</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by user login. Used in a similar way as CFID and CFToken, this cookie helps to uniquely identify a client device (browser) to enable the site to maintain user session variables.&quot;}" label="Description">Cookie
+ set by user login. Used in a similar way as CFID and CFToken, this 
+cookie helps to uniquely identify a client device (browser) to enable 
+the site to maintain user session variables.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">USER_ID2	</td>
+                      <td label="Provider / Domain">
+                                                ww2.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by user login. Used in a similar way as CFID and CFToken, this cookie helps to uniquely identify a client device (browser) to enable the site to maintain user session variables.&quot;}" label="Description">Cookie
+ set by user login. Used in a similar way as CFID and CFToken, this 
+cookie helps to uniquely identify a client device (browser) to enable 
+the site to maintain user session variables.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">CFID</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://www.adobe.com/privacy/policy.html">Adobe Inc.</a>                          </div>
+                                                ww3.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by Adobe ColdFusion applications. Used in conjunction with CFTOKEN this cookie helps to uniquely identify a client device (browser) to enable the site to maintain user session variables. How those are used are specific to the site. CFID contains a sequential number to identify the client.&quot;}" label="Description">Cookie
+ set by Adobe ColdFusion applications. Used in conjunction with CFTOKEN 
+this cookie helps to uniquely identify a client device (browser) to 
+enable the site to maintain user session variables. How those are used 
+are specific to the site. CFID contains a sequential number to identify 
+the client.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">CFTOKEN</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://www.adobe.com/privacy/policy.html">Adobe Inc.</a>                          </div>
+                                                ww3.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by Adobe ColdFusion applications. Used in conjunction with CFID this cookie helps to uniquely identify a client device (browser) to enable the site to maintain user session variables. How those are used are specific to the site. CFTOKEN contains a random number to identify the client.&quot;}" label="Description">Cookie
+ set by Adobe ColdFusion applications. Used in conjunction with CFID 
+this cookie helps to uniquely identify a client device (browser) to 
+enable the site to maintain user session variables. How those are used 
+are specific to the site. CFTOKEN contains a random number to identify 
+the client.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">CSSESSIONID</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by user login. Used in a similar way as CFID and CFToken, this cookie helps to uniquely identify a client device (browser) to enable the site to maintain user session variables.&quot;}" label="Description">Cookie
+ set by user login. Used in a similar way as CFID and CFToken, this 
+cookie helps to uniquely identify a client device (browser) to enable 
+the site to maintain user session variables.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">CFID</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://www.adobe.com/privacy/policy.html">Adobe Inc.</a>                          </div>
+                                                ww4.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;1 year&quot;}" label="Expiration">1 year</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by Adobe ColdFusion applications. Used in conjunction with CFTOKEN this cookie helps to uniquely identify a client device (browser) to enable the site to maintain user session variables. How those are used are specific to the site. CFID contains a sequential number to identify the client.&quot;}" label="Description">Cookie
+ set by Adobe ColdFusion applications. Used in conjunction with CFTOKEN 
+this cookie helps to uniquely identify a client device (browser) to 
+enable the site to maintain user session variables. How those are used 
+are specific to the site. CFID contains a sequential number to identify 
+the client.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">CFTOKEN</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://www.adobe.com/privacy/policy.html">Adobe Inc.</a>                          </div>
+                                                ww4.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;1 year&quot;}" label="Expiration">1 year</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by Adobe ColdFusion applications. Used in conjunction with CFID this cookie helps to uniquely identify a client device (browser) to enable the site to maintain user session variables. How those are used are specific to the site. CFTOKEN contains a random number to identify the client.&quot;}" label="Description">Cookie
+ set by Adobe ColdFusion applications. Used in conjunction with CFID 
+this cookie helps to uniquely identify a client device (browser) to 
+enable the site to maintain user session variables. How those are used 
+are specific to the site. CFTOKEN contains a random number to identify 
+the client.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">ATTRSEC2</td>
+                      <td label="Provider / Domain">
+                                                ww2.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;1 year&quot;}" label="Expiration">1 year</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This secure cookie attribute directs a web browser to only use cookies on secure or encrypted sessions&quot;}" label="Description">This secure cookie attribute directs a web browser to only use cookies on secure or encrypted sessions</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">NEW_OLD	</td>
+                      <td label="Provider / Domain">
+                                                ww2.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;1 year&quot;}" label="Expiration">1 year</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is safely used to distinguish between a new user and a user who has visited the website before.&quot;}" label="Description">This cookie is safely used to distinguish between a new user and a user who has visited the website before.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">USER_ID</td>
+                      <td label="Provider / Domain">
+                                                ww2.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;1 year&quot;}" label="Expiration">1 year</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by user login. Used in a similar way as CFID and CFToken, this cookie helps to uniquely identify a client device (browser) to enable the site to maintain user session variables.&quot;}" label="Description">Cookie
+ set by user login. Used in a similar way as CFID and CFToken, this 
+cookie helps to uniquely identify a client device (browser) to enable 
+the site to maintain user session variables.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">PHPSESSID</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://www.php.net/privacy.php">PHP.net</a>                          </div>
+                                                54032.cometondemand.net                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie generated by applications based on the PHP language. This is a general purpose identifier used to maintain user session variables. It is normally a random generated number, how it is used can be specific to the site, but a good example is maintaining a logged-in status for a user between pages. This cookie is set by Comet Chat&quot;}" label="Description">Cookie
+ generated by applications based on the PHP language. This is a general 
+purpose identifier used to maintain user session variables. It is 
+normally a random generated number, how it is used can be specific to 
+the site, but a good example is maintaining a logged-in status for a 
+user between pages. This cookie is set by Comet Chat</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">AWSELBCORS</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://advertising.amazon.com/legal/privacy-notice">Amazon.com Inc.</a>                          </div>
+                                                54032.cometondemand.net                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;The cookies AWSELB and AWSELBCORS are functionally the same cookies. The latter has an explicit SameSite attribute set because of changes made from Chrome 80 and upwards.\u00a0This cookie is set by Comet Chat.&quot;}" label="Description">The
+ cookies AWSELB and AWSELBCORS are functionally the same cookies. The 
+latter has an explicit SameSite attribute set because of changes made 
+from Chrome 80 and upwards.&nbsp;This cookie is set by Comet Chat.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">__stripe_mid</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://stripe.com/privacy">Stripe Inc.</a>                          </div>
+                                                .cookie-script.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is set by Comet Chat for the Chat feature if needed.&quot;}" label="Description">This cookie is set by Comet Chat for the Chat feature if needed.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">54032cc_usertype</td>
+                      <td label="Provider / Domain">
+                                                ww3.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is set by the chat functionality if used to differentiate between various team members.&quot;}" label="Description">This cookie is set by the chat functionality if used to differentiate between various team members.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">54032cc_disablelastseen</td>
+                      <td label="Provider / Domain">
+                                                ww3.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is set by the chat functionality if used to make messages more private.&quot;}" label="Description">This cookie is set by the chat functionality if used to make messages more private.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">54032cc_popup</td>
+                      <td label="Provider / Domain">
+                                                ww3.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is set by the chat functionality if used to ensure that the chat pop up shows correctly.&quot;}" label="Description">This cookie is set by the chat functionality if used to ensure that the chat pop up shows correctly.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">54032cc_read</td>
+                      <td label="Provider / Domain">
+                                                ww3.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is set by the chat functionality if used to validate if the message has been received.&quot;}" label="Description">This cookie is set by the chat functionality if used to validate if the message has been received.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">54032cc_an</td>
+                      <td label="Provider / Domain">
+                                                ww3.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is set by the chat functionality if used.&quot;}" label="Description">This cookie is set by the chat functionality if used.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">54032cc_data</td>
+                      <td label="Provider / Domain">
+                                                ww3.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is set by the chat functionality if used to allow chat functionality across team mates.&quot;}" label="Description">This cookie is set by the chat functionality if used to allow chat functionality across team mates.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">54032cc_unreadmsgadedafterlogin</td>
+                      <td label="Provider / Domain">
+                                                ww3.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is set by the chat functionality if used to validate if the message has not been sent.&quot;}" label="Description">This cookie is set by the chat functionality if used to validate if the message has not been sent.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">54032cc_loggedin</td>
+                      <td label="Provider / Domain">
+                                                ww3.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is set by the chat functionality if used to confirm that a user is logged in.&quot;}" label="Description">This cookie is set by the chat functionality if used to confirm that a user is logged in.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">SECURECAPSIMLOGIN</td>
+                      <td label="Provider / Domain">
+                                                ww3.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Internal Usage for Administration&quot;}" label="Description">Internal Usage for Administration</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">USEICT</td>
+                      <td label="Provider / Domain">
+                                                ww3.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Internal Usage for Simulation Administration&quot;}" label="Description">Internal Usage for Simulation Administration</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">CFTOKEN</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://www.adobe.com/privacy/policy.html">Adobe Inc.</a>                          </div>
+                                                .ww2.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by Adobe ColdFusion applications. Used in conjunction with CFID this cookie helps to uniquely identify a client device (browser) to enable the site to maintain user session variables. How those are used are specific to the site. CFTOKEN contains a random number to identify the client.&quot;}" label="Description">Cookie
+ set by Adobe ColdFusion applications. Used in conjunction with CFID 
+this cookie helps to uniquely identify a client device (browser) to 
+enable the site to maintain user session variables. How those are used 
+are specific to the site. CFTOKEN contains a random number to identify 
+the client.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">CFID</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://www.adobe.com/privacy/policy.html">Adobe Inc.</a>                          </div>
+                                                .ww2.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by Adobe ColdFusion applications. Used in conjunction with CFTOKEN this cookie helps to uniquely identify a client device (browser) to enable the site to maintain user session variables. How those are used are specific to the site. CFID contains a sequential number to identify the client.&quot;}" label="Description">Cookie
+ set by Adobe ColdFusion applications. Used in conjunction with CFTOKEN 
+this cookie helps to uniquely identify a client device (browser) to 
+enable the site to maintain user session variables. How those are used 
+are specific to the site. CFID contains a sequential number to identify 
+the client.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">CISESSIONID</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by Capsim Inbox Authoring Platform for Functionality&quot;}" label="Description">Cookie set by Capsim Inbox Authoring Platform for Functionality</td>
+                    </tr>
+                                    </tbody>
+                </table>
+              </div>
+            </div>
+                                  <div class="cookiescript_report_performance cookiescript_hidden" data-cs-tab-content="performance">
+              <div class="cookiescript_category_description" data-cs-i18n-text="{&quot;en&quot;:&quot;Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor.&quot;}">Performance
+ cookies are used to see how visitors use the website, eg. analytics 
+cookies. Those cookies cannot be used to directly identify a certain 
+visitor.</div>
+              <div class="cookiescript_tablewrap">
+                <table class="cookiescript_fullreport" data-cs-table-report="cookiescript">
+                    <caption style="display: none;">Cookie report</caption>
+                  <thead>
+                  <tr>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Name&quot;}">Name</th>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Provider&quot;} / {&quot;en&quot;:&quot;Domain&quot;}">
+                      Provider / Domain                    </th>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Expiration&quot;}">Expiration</th>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Description&quot;}">Description</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                                      <tr>
+                      <td label="Name">__utma</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://policies.google.com/privacy">Google LLC</a>                          </div>
+                                                .capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;2 years&quot;}" label="Expiration">2 years</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This is one of the four main cookies set by the Google Analytics service which enables website owners to track visitor behaviour and measure site performance. This cookie lasts for 2 years by default and distinguishes between users and sessions. It it used to calculate new and returning visitor statistics. The cookie is updated every time data is sent to Google Analytics. The lifespan of the cookie can be customised by website owners.&quot;}" label="Description">This
+ is one of the four main cookies set by the Google Analytics service 
+which enables website owners to track visitor behaviour and measure site
+ performance. This cookie lasts for 2 years by default and distinguishes
+ between users and sessions. It it used to calculate new and returning 
+visitor statistics. The cookie is updated every time data is sent to 
+Google Analytics. The lifespan of the cookie can be customised by 
+website owners.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">__utmc</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://policies.google.com/privacy">Google LLC</a>                          </div>
+                                                .capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This is one of the four main cookies set by the Google Analytics service which enables website owners to track visitor behaviour and measure site performance. It is not used in most sites but is set to enable interoperability with the older version of Google Analytics code known as Urchin. In this older versions this was used in combination with the __utmb cookie to identify new sessions\/visits for returning visitors. When used by Google Analytics this is always a Session cookie which is destroyed when the user closes their browser. Where it is seen as a Persistent cookie it is therefore likely to be a different technology setting the cookie.&quot;}" label="Description">This
+ is one of the four main cookies set by the Google Analytics service 
+which enables website owners to track visitor behaviour and measure site
+ performance. It is not used in most sites but is set to enable 
+interoperability with the older version of Google Analytics code known 
+as Urchin. In this older versions this was used in combination with the 
+__utmb cookie to identify new sessions/visits for returning visitors. 
+When used by Google Analytics this is always a Session cookie which is 
+destroyed when the user closes their browser. Where it is seen as a 
+Persistent cookie it is therefore likely to be a different technology 
+setting the cookie.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">__utmt_UA-39064288-4</td>
+                      <td label="Provider / Domain">
+                                                .capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;10 minutes&quot;}" label="Expiration">10 minutes</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This is a pattern type cookie set by Google Analytics, where the pattern element on the name contains the unique identity number of the account or website it relates to. It appears to be a variation of the __utmt cookie which is used to limit the amount of data recorded by Google on high traffic volume websites.&quot;}" label="Description">This
+ is a pattern type cookie set by Google Analytics, where the pattern 
+element on the name contains the unique identity number of the account 
+or website it relates to. It appears to be a variation of the __utmt 
+cookie which is used to limit the amount of data recorded by Google on 
+high traffic volume websites.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">_gid</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://policies.google.com/privacy">Google LLC</a>                          </div>
+                                                .capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;1 day&quot;}" label="Expiration">1 day</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is set by Google Analytics. It stores and update a unique value for each page visited and is used to count and track pageviews.\r\n&quot;}" label="Description">This
+ cookie is set by Google Analytics. It stores and update a unique value 
+for each page visited and is used to count and track pageviews.
+</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">__utmz</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://policies.google.com/privacy">Google LLC</a>                          </div>
+                                                .capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;6 months 2 days&quot;}" label="Expiration">6 months 2 days</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This is one of the four main cookies set by the Google Analytics service which enables website owners to track visitor behaviour measure of site performance. This cookie identifies the source of traffic to the site - so Google Analytics can tell site owners where visitors came from when arriving on the site. The cookie has a life span of 6 months and is updated every time data is sent to Google Analytics.&quot;}" label="Description">This
+ is one of the four main cookies set by the Google Analytics service 
+which enables website owners to track visitor behaviour measure of site 
+performance. This cookie identifies the source of traffic to the site - 
+so Google Analytics can tell site owners where visitors came from when 
+arriving on the site. The cookie has a life span of 6 months and is 
+updated every time data is sent to Google Analytics.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">__utmb</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://policies.google.com/privacy">Google LLC</a>                          </div>
+                                                .capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;30 minutes&quot;}" label="Expiration">30 minutes</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This is one of the four main cookies set by the Google Analytics service which enables website owners to track visitor behaviour and measure site performance. This cookie determines new sessions and visits and expires after 30 minutes. The cookie is updated every time data is sent to Google Analytics. Any activity by a user within the 30 minute life span will count as a single visit, even if the user leaves and then returns to the site. A return after 30 minutes will count as a new visit, but a returning visitor.&quot;}" label="Description">This
+ is one of the four main cookies set by the Google Analytics service 
+which enables website owners to track visitor behaviour and measure site
+ performance. This cookie determines new sessions and visits and expires
+ after 30 minutes. The cookie is updated every time data is sent to 
+Google Analytics. Any activity by a user within the 30 minute life span 
+will count as a single visit, even if the user leaves and then returns 
+to the site. A return after 30 minutes will count as a new visit, but a 
+returning visitor.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">__hstc</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://legal.hubspot.com/privacy-policy">HubSpot Inc.</a>                          </div>
+                                                .capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;1 year&quot;}" label="Expiration">1 year</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie name is associated with websites built on the HubSpot platform. It is reported by them as being used for website analytics.&quot;}" label="Description">This
+ cookie name is associated with websites built on the HubSpot platform. 
+It is reported by them as being used for website analytics.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">__hssrc</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://legal.hubspot.com/privacy-policy">HubSpot Inc.</a>                          </div>
+                                                .capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie name is associated with websites built on the HubSpot platform. It is reported by them as being used for website analytics.&quot;}" label="Description">This
+ cookie name is associated with websites built on the HubSpot platform. 
+It is reported by them as being used for website analytics.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">__hssc</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://legal.hubspot.com/privacy-policy">HubSpot Inc.</a>                          </div>
+                                                .capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;30 minutes&quot;}" label="Expiration">30 minutes</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie name is associated with websites built on the HubSpot platform. It is reported by them as being used for website analytics.&quot;}" label="Description">This
+ cookie name is associated with websites built on the HubSpot platform. 
+It is reported by them as being used for website analytics.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">_gat_UA-39064288-4</td>
+                      <td label="Provider / Domain">
+                                                .capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;1 minute&quot;}" label="Expiration">1 minute</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This is a pattern type cookie set by Google Analytics, where the pattern element on the name contains the unique identity number of the account or website it relates to. It is a variation of the _gat cookie which is used to limit the amount of data recorded by Google on high traffic volume websites.&quot;}" label="Description">This
+ is a pattern type cookie set by Google Analytics, where the pattern 
+element on the name contains the unique identity number of the account 
+or website it relates to. It is a variation of the _gat cookie which is 
+used to limit the amount of data recorded by Google on high traffic 
+volume websites.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">_ga</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://policies.google.com/privacy">Google LLC</a>                          </div>
+                                                .capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;2 years&quot;}" label="Expiration">2 years</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie name is associated with Google Universal Analytics - which is a significant update to Google's more commonly used analytics service. This cookie is used to distinguish unique users by assigning a randomly generated number as a client identifier. It is included in each page request in a site and used to calculate visitor, session and campaign data for the sites analytics reports. &quot;}" label="Description">This
+ cookie name is associated with Google Universal Analytics - which is a 
+significant update to Google's more commonly used analytics service. 
+This cookie is used to distinguish unique users by assigning a randomly 
+generated number as a client identifier. It is included in each page 
+request in a site and used to calculate visitor, session and campaign 
+data for the sites analytics reports. </td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">AWSALBCORS</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://advertising.amazon.com/legal/privacy-notice">Amazon.com Inc.</a>                          </div>
+                                                ww5.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by Amazon Web Services Load Balancer to maintain successful website connection.&quot;}" label="Description">Cookie set by Amazon Web Services Load Balancer to maintain successful website connection.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">AWSALB</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://advertising.amazon.com/legal/privacy-notice">Amazon.com Inc.</a>                          </div>
+                                                ww5.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie set by Amazon Web Services Load Balancer to maintain successful website connection.&quot;}" label="Description">Cookie set by Amazon Web Services Load Balancer to maintain successful website connection.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">_pendo_accountId.YOUR_SUBSCRIPTION_KEY_VALUE</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Pendo Analytics Cookie Purpose - The Agent uses this cookie to identify and record the visitor\u2019s Account ID that will be used in Pendo like Guide delivery and analytics.\r\n\r\n&quot;}" label="Description">Pendo
+ Analytics Cookie Purpose - The Agent uses this cookie to identify and 
+record the visitor’s Account ID that will be used in Pendo like Guide 
+delivery and analytics.
+
+</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">_pendo_visitorId.YOUR_SUBSCRIPTION_KEY_VALUE</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Pendo Analytics Cookie Purpose - The agent uses this cookie to identify and record the visitor information so the information is used in Pendo analytics and Guide delivery. \r\n\r\n&quot;}" label="Description">Pendo
+ Analytics Cookie Purpose - The agent uses this cookie to identify and 
+record the visitor information so the information is used in Pendo 
+analytics and Guide delivery. 
+
+</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">log-enabled</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Pendo Analytics Cookie Purpose - The agent uses this cookie to record additional details for troubleshooting purposes.\r\n\r\n&quot;}" label="Description">Pendo Analytics Cookie Purpose - The agent uses this cookie to record additional details for troubleshooting purposes.
+
+</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">_pendo_launcher-closed.YOUR_SUBSCRIPTION_KEY_VALUE</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Pendo Analytics Cookie Purpose - The agent uses this cookie to identify and record the visitor information. Then, the information is used in Pendo analytics and Guide delivery. \r\n\r\n\r\n&quot;}" label="Description">Pendo
+ Analytics Cookie Purpose - The agent uses this cookie to identify and 
+record the visitor information. Then, the information is used in Pendo 
+analytics and Guide delivery. 
+
+
+</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">debug-enabled</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Pendo Analytics Cookie Purpose - Written and read in when the function pendo.isDebuggingEnabled() is triggered, which gets information from this cookie, is used in several places (like log.js, guides.js, and exports.js)\/\r\n\r\n&quot;}" label="Description">Pendo
+ Analytics Cookie Purpose - Written and read in when the function 
+pendo.isDebuggingEnabled() is triggered, which gets information from 
+this cookie, is used in several places (like log.js, guides.js, and 
+exports.js)/
+
+</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">_pendo_meta.YOUR_SUBSCRIPTION_KEY_VALUE</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Pendo Analytics Cookie Purpose - Written and read in the agent. This cookie stores a hash of the current metadata so that Pendo can see when it's changed and update it.\r\n\r\n&quot;}" label="Description">Pendo
+ Analytics Cookie Purpose - Written and read in the agent. This cookie 
+stores a hash of the current metadata so that Pendo can see when it's 
+changed and update it.
+
+</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">_pendo_lastStepAdvanced.YOUR_SUBSCRIPTION_KEY_VALUE</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Pendo Analytics Cookie Purpose - Written and read in the agent. This cookie, along with \&quot;latestDismissedAutoAt\&quot; and \&quot;finalDismissedAutoAt,\&quot; are short-term cookies (~10 seconds) that keep guides from showing again after they've been dismissed.\r\n\r\n&quot;}" label="Description">Pendo
+ Analytics Cookie Purpose - Written and read in the agent. This cookie, 
+along with "latestDismissedAutoAt" and "finalDismissedAutoAt," are 
+short-term cookies (~10 seconds) that keep guides from showing again 
+after they've been dismissed.
+
+</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">_pendo_latestDismissedAutoAt.YOUR_SUBSCRIPTION_KEY_VALUE</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Pendo Analytics Cookie Purpose - Written and read in the agent. This cookie, along with \&quot;lastStepAdvanced\&quot; and \&quot;finalDismissedAutoAt,\&quot; are short-term cookies (~10 seconds) that keep guides from showing again after they've been dismissed.\r\n\r\n&quot;}" label="Description">Pendo
+ Analytics Cookie Purpose - Written and read in the agent. This cookie, 
+along with "lastStepAdvanced" and "finalDismissedAutoAt," are short-term
+ cookies (~10 seconds) that keep guides from showing again after they've
+ been dismissed.
+
+</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">_pendo_finalDismissedAutoAt.YOUR_SUBSCRIPTION_KEY_VALUE</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Pendo Analytics Cookie Purpose - Written and read in the agent. This cookie, along with \&quot;lastStepAdvanced\&quot; and \&quot;latestDismissedAutoAt,\&quot; are short-term cookies (~10 seconds) that keep guides from showing again after they've been dismissed.\r\n\r\n&quot;}" label="Description">Pendo
+ Analytics Cookie Purpose - Written and read in the agent. This cookie, 
+along with "lastStepAdvanced" and "latestDismissedAutoAt," are 
+short-term cookies (~10 seconds) that keep guides from showing again 
+after they've been dismissed.
+
+</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">active-contexts</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Pendo Analytics Cookie Purpose - Read and written in the agent based on what is and isn't logged to the console.\r\n\r\n&quot;}" label="Description">Pendo Analytics Cookie Purpose - Read and written in the agent based on what is and isn't logged to the console.
+
+</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">_pendo_feedback_ping_sent.YOUR_SUBSCRIPTION_KEY_VALUE</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Pendo Analytics Cookie Purpose - The response of a ping includes a notification count. Pendo writes this to a cookie so that it is persisted across refreshes, It\u2019s deleted when the user opens feedback.\r\n\r\n&quot;}" label="Description">Pendo
+ Analytics Cookie Purpose - The response of a ping includes a 
+notification count. Pendo writes this to a cookie so that it is 
+persisted across refreshes, It’s deleted when the user opens feedback.
+
+</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">_pendo_receptive_ping_sent.YOUR_SUBSCRIPTION_KEY_VALUE</td>
+                      <td label="Provider / Domain">
+                                                ww5.capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Pendo Analytics Cookie Purpose - The response of a ping includes a notification count. Pendo writes this to a cookie so that it is persisted across refreshes, It\u2019s deleted when the user opens feedback.\r\n\r\n&quot;}" label="Description">Pendo
+ Analytics Cookie Purpose - The response of a ping includes a 
+notification count. Pendo writes this to a cookie so that it is 
+persisted across refreshes, It’s deleted when the user opens feedback.
+
+</td>
+                    </tr>
+                                    </tbody>
+                </table>
+              </div>
+            </div>
+                                  <div class="cookiescript_report_targeting cookiescript_hidden" data-cs-tab-content="targeting">
+              <div class="cookiescript_category_description" data-cs-i18n-text="{&quot;en&quot;:&quot;Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites.&quot;}">Targeting
+ cookies are used to identify visitors between different websites, eg. 
+content partners, banner networks. Those cookies may be used by 
+companies to build a profile of visitor interests or show relevant ads 
+on other websites.</div>
+              <div class="cookiescript_tablewrap">
+                <table class="cookiescript_fullreport" data-cs-table-report="cookiescript">
+                    <caption style="display: none;">Cookie report</caption>
+                  <thead>
+                  <tr>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Name&quot;}">Name</th>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Provider&quot;} / {&quot;en&quot;:&quot;Domain&quot;}">
+                      Provider / Domain                    </th>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Expiration&quot;}">Expiration</th>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Description&quot;}">Description</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                                      <tr>
+                      <td label="Name">__cf_bm</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://www.cloudflare.com/privacypolicy">Cloudflare Inc.</a>                          </div>
+                                                .hubspot.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;30 minutes&quot;}" label="Expiration">30 minutes</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is used to distinguish between humans and bots. This is beneficial for the website, in order to make valid reports on the use of their website.&quot;}" label="Description">This
+ cookie is used to distinguish between humans and bots. This is 
+beneficial for the website, in order to make valid reports on the use of
+ their website.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">hubspotutk</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://legal.hubspot.com/privacy-policy">HubSpot Inc.</a>                          </div>
+                                                .capsim.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;1 year&quot;}" label="Expiration">1 year</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie name is associated with websites built on the HubSpot platform. HubSpot report that its purpose is user authentication. As a persistent rather than a session cookie it cannot be classified as Strictly Necessary.&quot;}" label="Description">This
+ cookie name is associated with websites built on the HubSpot platform. 
+HubSpot report that its purpose is user authentication. As a persistent 
+rather than a session cookie it cannot be classified as Strictly 
+Necessary.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">VISITOR_INFO1_LIVE</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://policies.google.com/privacy">Google LLC</a>                          </div>
+                                                .youtube.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;6 months&quot;}" label="Expiration">6 months</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is set by Youtube to keep track of user preferences for Youtube videos embedded in sites;it can also determine whether the website visitor is using the new or old version of the Youtube interface.&quot;}" label="Description">This
+ cookie is set by Youtube to keep track of user preferences for Youtube 
+videos embedded in sites;it can also determine whether the website 
+visitor is using the new or old version of the Youtube interface.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">YSC</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://policies.google.com/privacy">Google LLC</a>                          </div>
+                                                .youtube.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie is set by YouTube to track views of embedded videos.&quot;}" label="Description">This cookie is set by YouTube to track views of embedded videos.</td>
+                    </tr>
+                                      <tr>
+                      <td label="Name">smcx_0_last_shown_at</td>
+                      <td label="Provider / Domain">
+                                                ww3.capsim.com	                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Records if a visitor has seen and responded to a SurveyMonkey popup window inviting them to take a survey, so they are not presented with it again in future.&quot;}" label="Description">Records
+ if a visitor has seen and responded to a SurveyMonkey popup window 
+inviting them to take a survey, so they are not presented with it again 
+in future.</td>
+                    </tr>
+                                    </tbody>
+                </table>
+              </div>
+            </div>
+                                  <div class="cookiescript_report_functionality cookiescript_hidden" data-cs-tab-content="functionality">
+              <div class="cookiescript_category_description" data-cs-i18n-text="{&quot;en&quot;:&quot;Functionality cookies are used to remember visitor information on the website, eg. language, timezone, enhanced content.&quot;}">Functionality cookies are used to remember visitor information on the website, eg. language, timezone, enhanced content.</div>
+              <div class="cookiescript_tablewrap">
+                <table class="cookiescript_fullreport" data-cs-table-report="cookiescript">
+                    <caption style="display: none;">Cookie report</caption>
+                  <thead>
+                  <tr>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Name&quot;}">Name</th>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Provider&quot;} / {&quot;en&quot;:&quot;Domain&quot;}">
+                      Provider / Domain                    </th>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Expiration&quot;}">Expiration</th>
+                    <th scope="col" data-cs-i18n-text="{&quot;en&quot;:&quot;Description&quot;}">Description</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                                      <tr>
+                      <td label="Name">1P_JAR</td>
+                      <td label="Provider / Domain">
+                                                  <div class="cookiescript_vendor_name">
+                            <a target="_blank" rel="nofollow" href="https://policies.google.com/privacy">Google LLC</a>                          </div>
+                                                .gstatic.com                      </td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;Session&quot;}" label="Expiration">Session</td>
+                      <td data-cs-i18n-text="{&quot;en&quot;:&quot;This cookie carries out information about how the end user uses the website and any advertising that the end user may have seen before visiting the said website.&quot;}" label="Description">This
+ cookie carries out information about how the end user uses the website 
+and any advertising that the end user may have seen before visiting the 
+said website.</td>
+                    </tr>
+                                    </tbody>
+                </table>
+              </div>
+            </div>
+                  </div>
+      </div>
+      <div id="cookiescript_aboutwrap" class="cookiescript_hidden" data-cs-maintab-content="aboutcookies">
+        <span data-cs-i18n-text="{&quot;en&quot;:&quot;Cookies are small text files that are placed on your computer by websites that you visit. Websites use cookies to help users navigate efficiently and perform certain functions. Cookies that are required for the website to operate properly are allowed to be set without your permission. All other cookies need to be approved before they can be set in the browser. \r&lt;br&gt;\r&lt;br&gt;You can change your consent to cookie usage at any time on our Privacy Policy page.&quot;}">Cookies
+ are small text files that are placed on your computer by websites that 
+you visit. Websites use cookies to help users navigate efficiently and 
+perform certain functions. Cookies that are required for the website to 
+operate properly are allowed to be set without your permission. All 
+other cookies need to be approved before they can be set in the browser.
+ 
+<br>
+<br>You can change your consent to cookie usage at any time on our Privacy Policy page.</span>
+        <div style="display: none;" data-cs-consent-key-box="cookie-script">
+          <span data-cs-i18n-text="{&quot;en&quot;:&quot;Cookies consent ID&quot;}">Cookies consent ID</span>:
+          <span data-cs-consent-key="cookie-script"></span>
+        </div>
+      </div>
+          </div>
+	<div id="cookiescript_reportdate">Cookie <a id="cookiescript_reportlink" href="https://cookie-script.com/cookie-report?identifier=35f20872bb10169b2823b59183bc12a7" target="_blank">report</a> created by <a href="https://cookie-script.com/" id="cookiescript_cookiescriptlink" title="CookieScript Consent Management Platform" target="_blank">CookieScript</a></div>
+	</div>
+		
+</div>
+</div>
+<div class="cometchat_popup_overlay" style="display:none;"><div class="cometchat_popup_modal"><div><div class="cometchat_popup_content"><div class="cometchat_popup_container"></div></div></div></div></div><div id="cometchat"><div id="cometchat_base"><div id="cometchat_sidebar"><div id="cometchat_userstab_popup" class="cometchat_tabpopup cometchat_tabhidden" style="right: 15px"><div class="cometchat_userstabtitle"><div class="cometchat_userstabtitletext cometchat_tabtitle_header">Chats</div><div class="cometchat_closebox cometchat_tooltip" id="cometchat_minimize_userstabpopup" title="Minimize User Tab"></div><div class="cometchat_vline"></div><div class="cometchat_left_icons_panel"><div id="cometchat_moreicon" class="cometchat_tabicons" title="More Options"><svg id="cometchat_svg_moreoption" width="25" height="25" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.7575 20.8335C10.4773 20.8335 8.61168 22.7085 8.61168 25.0002C8.61168 27.2918 10.4773 29.1668 12.7575 29.1668C15.0377 29.1668 16.9033 27.2918 16.9033 25.0002C16.9033 22.7085 15.0377 20.8335 12.7575 20.8335ZM37.6325 20.8335C35.3523 20.8335 33.4867 22.7085 33.4867 25.0002C33.4867 27.2918 35.3523 29.1668 37.6325 29.1668C39.9127 29.1668 41.7783 27.2918 41.7783 25.0002C41.7783 22.7085 39.9127 20.8335 37.6325 20.8335ZM25.195 20.8335C22.9148 20.8335 21.0492 22.7085 21.0492 25.0002C21.0492 27.2918 22.9148 29.1668 25.195 29.1668C27.4752 29.1668 29.3408 27.2918 29.3408 25.0002C29.3408 22.7085 27.4752 20.8335 25.195 20.8335Z" fill="white"></path></svg></div></div></div><div class="cometchat_search_wrapper"><div id="cometchat_searchbar" class="" style="display:block;"><div id="cometchat_searchbar_icon"></div><input id="cometchat_search" type="text" name="cometchat_search" class="cometchat_search cometchat_search_light textInput" placeholder="Search or start new chat"><div class="cometchat_closeboxsearch cometchat_tooltip" id="close_user_search" title="Clear search"></div></div></div><div class="cometchat_tabcontent cometchat_tabstyle"><div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 258px;"><div id="cometchat_userscontent" style="overflow: hidden; height: 266px;"><div id="cometchat_recentlist" class="cometchat_tabhidden"><div class="cometchat_nofriends" style="height: 266px; overflow: hidden auto;"><div class="cometchat_emptycontact"><span><img src="rd0_courier_files/no_recent.png" class="nocontacts"></span><div class="nocontact_message recentmessage_align">No recent chats available</div></div></div></div><div id="cometchat_contactslist" class="cometchat_tabopen"><div class="cometchat_scroll" style="height: 258px; overflow: hidden auto;"><div id="cometchat_userlist_520886" class="cometchat_userlist" onmouseover="jqcc(this).addClass('cometchat_userlist_hover');" onmouseout="jqcc(this).removeClass('cometchat_userlist_hover');" amount="0"><div class="cometchat_userscontentavatar"><img class="cometchat_userscontentavatarimage" referrerpolicy="no-referrer" src="rd0_courier_files/a.png" onerror="this.onerror=null;this.src='//fast.cometondemand.net/admin/images/pixel.png'"></div><div style="display:inline-block;"><div class="cometchat_userscontentname" title="Andrew Cotaj">Andrew Cotaj</div><div id="cometchat_buddylist_typing_520886" class="cometchat_buddylist_typing"></div></div><div><div class="cometchat_userscontentdot cometchat_user_offline"></div><div class="cometchat_buddylist_status" title="I'm offline">I'm offline</div></div><div class="cometchat_unreadCount cometchat_floatR cometchat_countDir" style="display:none;">0</div></div><div id="cometchat_userlist_525297" class="cometchat_userlist" onmouseover="jqcc(this).addClass('cometchat_userlist_hover');" onmouseout="jqcc(this).removeClass('cometchat_userlist_hover');" amount="0"><div class="cometchat_userscontentavatar"><img class="cometchat_userscontentavatarimage" referrerpolicy="no-referrer" src="rd0_courier_files/b.png" onerror="this.onerror=null;this.src='//fast.cometondemand.net/admin/images/pixel.png'"></div><div style="display:inline-block;"><div class="cometchat_userscontentname" title="Brynn Johnson">Brynn Johnson</div><div id="cometchat_buddylist_typing_525297" class="cometchat_buddylist_typing"></div></div><div><div class="cometchat_userscontentdot cometchat_user_offline"></div><div class="cometchat_buddylist_status" title="I'm offline">I'm offline</div></div><div class="cometchat_unreadCount cometchat_floatR cometchat_countDir" style="display:none;">0</div></div><div id="cometchat_userlist_520770" class="cometchat_userlist" onmouseover="jqcc(this).addClass('cometchat_userlist_hover');" onmouseout="jqcc(this).removeClass('cometchat_userlist_hover');" amount="0"><div class="cometchat_userscontentavatar"><img class="cometchat_userscontentavatarimage" referrerpolicy="no-referrer" src="rd0_courier_files/k.png" onerror="this.onerror=null;this.src='//fast.cometondemand.net/admin/images/pixel.png'"></div><div style="display:inline-block;"><div class="cometchat_userscontentname" title="Kieran Cosden">Kieran Cosden</div><div id="cometchat_buddylist_typing_520770" class="cometchat_buddylist_typing"></div></div><div><div class="cometchat_userscontentdot cometchat_user_offline"></div><div class="cometchat_buddylist_status" title="I'm offline">I'm offline</div></div><div class="cometchat_unreadCount cometchat_floatR cometchat_countDir" style="display:none;">0</div></div><div id="cometchat_userlist_526878" class="cometchat_userlist" onmouseover="jqcc(this).addClass('cometchat_userlist_hover');" onmouseout="jqcc(this).removeClass('cometchat_userlist_hover');" amount="0"><div class="cometchat_userscontentavatar"><img class="cometchat_userscontentavatarimage" referrerpolicy="no-referrer" src="rd0_courier_files/l.png" onerror="this.onerror=null;this.src='//fast.cometondemand.net/admin/images/pixel.png'"></div><div style="display:inline-block;"><div class="cometchat_userscontentname" title="Logan St. Pierre">Logan St. Pierre</div><div id="cometchat_buddylist_typing_526878" class="cometchat_buddylist_typing"></div></div><div><div class="cometchat_userscontentdot cometchat_user_offline"></div><div class="cometchat_buddylist_status" title="I'm offline">I'm offline</div></div><div class="cometchat_unreadCount cometchat_floatR cometchat_countDir" style="display:none;">0</div></div><div id="cometchat_userlist_521288" class="cometchat_userlist" onmouseover="jqcc(this).addClass('cometchat_userlist_hover');" onmouseout="jqcc(this).removeClass('cometchat_userlist_hover');" amount="0"><div class="cometchat_userscontentavatar"><img class="cometchat_userscontentavatarimage" referrerpolicy="no-referrer" src="rd0_courier_files/q.png" onerror="this.onerror=null;this.src='//fast.cometondemand.net/admin/images/pixel.png'"></div><div style="display:inline-block;"><div class="cometchat_userscontentname" title="Quinn Akerman">Quinn Akerman</div><div id="cometchat_buddylist_typing_521288" class="cometchat_buddylist_typing"></div></div><div><div class="cometchat_userscontentdot cometchat_user_offline"></div><div class="cometchat_buddylist_status" title="I'm offline">I'm offline</div></div><div class="cometchat_unreadCount cometchat_floatR cometchat_countDir" style="display:none;">0</div></div><div id="cometchat_userlist_526894" class="cometchat_userlist" onmouseover="jqcc(this).addClass('cometchat_userlist_hover');" onmouseout="jqcc(this).removeClass('cometchat_userlist_hover');" amount="0"><div class="cometchat_userscontentavatar"><img class="cometchat_userscontentavatarimage" referrerpolicy="no-referrer" src="rd0_courier_files/r.png" onerror="this.onerror=null;this.src='//fast.cometondemand.net/admin/images/pixel.png'"></div><div style="display:inline-block;"><div class="cometchat_userscontentname" title="Robert Parillo">Robert Parillo</div><div id="cometchat_buddylist_typing_526894" class="cometchat_buddylist_typing"></div></div><div><div class="cometchat_userscontentdot cometchat_user_offline"></div><div class="cometchat_buddylist_status" title="I'm offline">I'm offline</div></div><div class="cometchat_unreadCount cometchat_floatR cometchat_countDir" style="display:none;">0</div></div></div></div><div id="cometchat_groupslist" class="cometchat_tabhidden"><div id="cometchat_groupslist_content"><div style="height: 258px;"><div id="cometchat_joinedgroups"><select id="grouptype_labels" class="cometchat_grouptype_labels"><option value="1" selected="selected">JOINED GROUPS</option><option value="2">OTHER GROUPS</option></select></div><div id="cometchat_joinedgroupslist"><div grouptype="4" id="cometchat_grouplist_138246" class="cometchat_grouplist" onmouseover="jqcc(this).addClass('cometchat_grouplist_hover');" onmouseout="jqcc(this).removeClass('cometchat_grouplist_hover');" onclick="javascript:jqcc.cometchat.chatroom('138246','QW5kcmV3cw==','4','','1','1','1');" amount="0"><div class="cometchat_groupscontentavatar "><img class="cometchat_groupscontentavatarimage" src="rd0_courier_files/group.svg"></div><div><div class="cometchat_groupscontentname" title="Andrews">Andrews</div></div><div class="cometchat_groupusercount">Participants: <span class="cometchat_count">8</span></div><div class="cometchat_unreadCount cometchat_floatR" style="display:none;">0</div></div></div><div id="cometchat_othergroupslist" class="cometchat_nogroupcreated grouplist_hide"><div class="cometchat_emptycontact"><span><img src="rd0_courier_files/no_groups.png" class="nocontacts"></span><div class="cometchat_nogroups">No groups available</div></div></div></div></div></div><div id="cometchat_searchlist" class="cometchat_tabopen"><div id="cometchat_userslist_content"></div></div></div><div class="slimScrollBar ui-draggable" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 0px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(255, 255, 255); opacity: 0.2; z-index: 90; right: 1px;"></div></div></div><div id="cometchat_tabcontainer"><div class="cometchat_tablerow"><div id="cometchat_recenttab" class="cometchat_tab" unselectable="on" cometchat_tooltip"="" title="Recent"><span id="cometchat_recenttab_text" class="cometchat_tabstext"><svg id="cometchat_svg_recentlist" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 19 20"><path xmlns="http://www.w3.org/2000/svg" fill-opacity="1" d="M15 6.65H5c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1zm-4 6H5c-.55 0-1-.45-1-1s.45-1 1-1h6c.55 0 1 .45 1 1s-.45 1-1 1zm-6-5h10c.55 0 1 .45 1 1s-.45 1-1 1H5c-.55 0-1-.45-1-1s.45-1 1-1zm13-7H2c-1.1 0-1.99.9-1.99 2l-.01 18 4-4h14c1.1 0 2-.9 2-2v-12c0-1.1-.9-2-2-2z"></path></svg></span></div><div id="cometchat_contactstab" class="cometchat_tab cometchat_tab_clicked" unselectable="on" cometchat_tooltip"="" title="Contacts"><span id="cometchat_chatstab_text" class="cometchat_tabstext"><svg id="cometchat_svg_contactlist" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 20"><path fill-opacity="1" d="M18 16.4v1.125c0 .619-.506 1.125-1.125 1.125H1.125A1.128 1.128 0 0 1 0 17.525V16.4c0-2.993 5.996-4.5 9-4.5 3.004 0 9 1.507 9 4.5zM4.5 5.15C4.5 2.664 6.514.65 9 .65s4.5 2.014 4.5 4.5-2.014 4.5-4.5 4.5a4.499 4.499 0 0 1-4.5-4.5z"></path></svg></span></div><div id="cometchat_groupstab" class="cometchat_tab" unselectable="on" cometchat_tooltip"="" title="Groups"><span id="cometchat_groupstab_text" class="cometchat_tabstext"><svg id="cometchat_svg_grouplist" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 22 18"><path xmlns="http://www.w3.org/2000/svg" fill-opacity="1" d="M16 13.65v2c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1v-2c0-2.66 5.33-4 8-4s8 1.34 8 4zm-3.33-5.24a5.98 5.98 0 0 0 0-7.52c.42-.14.86-.24 1.33-.24 2.21 0 4 1.79 4 4s-1.79 4-4 4c-.47 0-.91-.1-1.33-.24zM4 4.65a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm18 9v2c0 .55-.45 1-1 1h-3v-3c0-1.68-.96-2.94-2.33-3.87 2.76.4 6.33 1.69 6.33 3.87z"></path></svg></span></div></div></div></div></div><div id="cometchat_optionsbutton_popup" class="cometchat_tabpopup cometchat_tabhidden" style="right: 15px;"><div class="cometchat_userstabtitle" style=""><div class="cometchat_userstabtitletext" style="width: 75%;text-align: left;">More</div><div class="cometchat_closebox cometchat_tooltip" id="cometchat_minimize_optionsbuttonpopup" title="Close Options Tab"></div></div><div id="cometchat_optionscontent" class="cometchat_tabcontent cometchat_optionstyle" style="overflow:hidden;"><form id="cometchat_optionsform"><div id="cometchat_selfname"><div class="cometchat_chats_labels">NAME</div><textarea readonly="readonly" id="cometchat_displayname" class="cometchat_lightdisplay">Brandon Hulse</textarea></div><div id="cometchat_statusmessage"><div class="cometchat_chats_labels">STATUS MESSAGE</div><div id="cometchat_statusmessageinput"><textarea class="cometchat_statustextarea" maxlength="140">I'm available</textarea><div class="cometchat_statusmessagecount">127</div></div></div><div class="cometchat_statusinputs"><div class="cometchat_chats_labels">ONLINE STATUS</div><div><div class="cometchat_optionsstatus available cometchat_lightdisplay"><div class="cometchat_optionsstatus2 cometchat_user_available"></div>Available<label class="cometchat_statusradio"><div id="cometchat_statusavailable_radio" type="radio" name="cometchat_statusoptions" value="available" class="selected"></div><span class="cometchat_radio_outer"><span class="cometchat_radio_inner"></span></span></label></div><div class="cometchat_optionsstatus away cometchat_lightdisplay"><div class="cometchat_optionsstatus2 cometchat_user_away"></div>Away<label class="cometchat_statusradio"><div id="cometchat_statusaway_radio" type="radio" name="cometchat_statusoptions" value="away"></div><span class="cometchat_radio_outer"><span class="cometchat_radio_inner"></span></span></label></div><div class="cometchat_optionsstatus busy cometchat_lightdisplay"><div class="cometchat_optionsstatus2 cometchat_user_busy"></div>Busy<label class="cometchat_statusradio"><div id="cometchat_statusbusy_radio" type="radio" name="cometchat_statusoptions" value="busy"></div><span class="cometchat_radio_outer"><span class="cometchat_radio_inner"></span></span></label></div><div class="cometchat_optionsstatus cometchat_gooffline cometchat_lightdisplay" style="display: none !important"><div class="cometchat_optionsstatus2 cometchat_user_invisible"></div>Invisible<label class="cometchat_statusradio"><div id="cometchat_statusinvisible_radio" type="radio" name="cometchat_statusoptions" value="invisible"></div><span class="cometchat_radio_outer"><span class="cometchat_radio_inner"></span></span></label></div></div></div><div class="cometchat_options_disable"><div class="cometchat_chats_labels">NOTIFICATIONS</div><div><div class="cometchat_lightdisplay"><span class="cometchat_checkbox">Sound Notifications</span><label class="cometchat_checkboxcontrol cometchat_checkboxouter" id="cometchat_soundnotifications_label"><div type="checkbox" class="cometchat_checkbox cometchat_checkbox_div selected" name="cometchat_soundnotifications" id="cometchat_soundnotifications"></div><div class="cometchat_controlindicator"></div><div class="cometchat_checkindicator" style="display: block;"></div></label></div><div class="cometchat_lightdisplay"><span class="cometchat_checkbox">Popup Notifications</span><label class="cometchat_checkboxcontrol cometchat_checkboxouter" id="cometchat_popupnotifications_label"><div type="checkbox" class="cometchat_checkbox cometchat_checkbox_div selected" name="cometchat_popupnotifications" id="cometchat_popupnotifications"></div><div class="cometchat_controlindicator"></div><div class="cometchat_checkindicator" style="display: block;"></div></label></div><div class="cometchat_lightdisplay"><span class="cometchat_checkbox">Show Read Receipt</span><label class="cometchat_checkboxcontrol cometchat_checkboxouter" id="cometchat_readreceipt_label"><div type="checkbox" class="cometchat_checkbox cometchat_checkbox_div selected" name="cometchat_readreceipt" id="cometchat_readreceipt"></div><div class="cometchat_controlindicator"></div><div class="cometchat_checkindicator" style="display: block;"></div></label></div></div></div><div class="cometchat_chats_labels"></div><div class="cometchat_chats_labels"></div><div id="cometchat_moduleslist"></div></form></div></div><span id="cometchat_userstab" class="cometchat_tab" style="right: 1px"><span id="cometchat_userstab_text">Chats</span></span><div id="cometchat_chatboxes"><div id="cometchat_chatboxes_wide" class="cometchat_floatR"></div></div><div id="cometchat_chatbox_left" class="cometchat_tab"><div class="cometchat_tabalertlr" style="display:none;"></div><div class="cometchat_tabtext">0</div><div id="cometchat_unseenUserCount"></div><div id="cometchat_unseenchatboxes" style="display:none;"></div><div id="cometchat_chatbox_left_border_fix"></div><div id="cometchat_unseenUsers"></div></div></div><div class="cometchat_media_overlay" style="display:none;"><div class="cometchat_media_modal"><div><div class="cometchat_media_content"><div class="cometchat_media_container"></div></div><img class="cometchat_media_download" src="rd0_courier_files/download.png"><img class="cometchat_close_dialog" src="rd0_courier_files/close.png"></div></div></div></div><div id="cometchat_hidden" style="right: 18px; display: none;"><div id="cometchat_hidden_content"></div></div><div id="cometchat_tooltip" style="display: none;"><div class="cometchat_tooltip_content"></div></div><div id="cometchat_blockedcookie" style="right: 18px"><div class="cometchat_blockedcookie_content" style="right: 45px">To use the chat, you need to change your browser setting to allow all cookies.<br>For how to allow browser cookies you can refer this <a href="https://www.youtube.com/watch?v=vLg-H4GyqcA" target="_BLANK">video</a>.</div></div></body></html>
